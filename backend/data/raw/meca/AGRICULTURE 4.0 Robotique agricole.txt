@@ -1,0 +1,469 @@
+AGRICULTURE 4.0 Robotique agricole et matériel automatisé au service d’une production agricole durable Gestion intégrée des cultures Vol. 24 / 2020 ISSN 1020-5861 
+Gestion intégrée des cultures Vol. 24 / 2020 
+AGRICULTURE 4.0 
+Robotique agricole et matériel automatisé au service d’une production agricole durable 
+Santiago Santos Valle, Spécialiste de la mécanisation agricole, FAO 
+Josef Kienzle, Ingénieur agronome, FAO 
+Organisation des Nations Unies pour l’alimentation et l’agriculture, Rome, 2021 
+Citer comme suit: 
+Santos Valle, S. et Kienzle, J. 2021. Agriculture 4.0: Robotique agricole et matériel automatisé au service d’une production agricole durable. Gestion integrée de cultures. Vol. 24. Rome, FAO. 
+Les appellations employées dans ce produit d’information et la présentation des données qui y figurent n’impliquent de la part de l’Organisation des Nations Unies pour l’alimentation et l’agriculture (FAO) aucune prise de position quant au statut juridique ou au stade de développement des pays, territoires, villes ou zones ou de leurs autorités, ni quant au tracé de leurs frontières ou limites. Le fait qu’une société ou qu’un produit manufacturé, breveté ou non, soit mentionné ne signifie pas que la FAO approuve ou recommande ladite société ou ledit produit de préférence à d’autres sociétés ou produits analogues qui ne sont pas cités. 
+Les opinions exprimées dans ce produit d’information sont celles du/des auteur(s) et ne reflètent pas nécessairement les vues ou les politiques de la FAO. 
+ISSN 1020-5861 
+© FAO, 2021 
+Certains droits réservés. Cette œuvre est mise à la disposition du public selon les termes de la Licence Creative Commons Attribution-Pas d’Utilisation Commerciale-Partage dans les Mêmes Conditions 3.0 Organisations Intergouvernementales (CC BY NC SA 3.0 IGO; https://creativecommons.org/licenses/by-nc-sa/3.0/igo/legalcode.fr). 
+Selon les termes de cette licence, cette œuvre peut être copiée, diffusée et adaptée à des fins non commerciales, sous réserve que la source soit mentionnée. Lorsque l’œuvre est utilisée, rien ne doit laisser entendre que la FAO cautionne tels ou tels organisation, produit ou service. L’utilisation du logo de la FAO n’est pas autorisée. Si l’œuvre est adaptée, le produit de cette adaptation doit être diffusé sous la même licence Creative Commons ou sous une licence équivalente. Si l’œuvre est traduite, la traduction doit obligatoirement être accompagnée de la mention de la source ainsi que de la clause de non-responsabilité suivante: «La traduction n’a pas été réalisée par l’Organisation des Nations Unies pour l’alimentation et l’agriculture (FAO). La FAO n’est pas responsable du contenu ni de l’exactitude de la traduction. L’édition originale [langue] est celle qui fait foi.» 
+Tout litige relatif à la présente licence ne pouvant être résolu à l'amiable sera réglé par voie de médiation et d'arbitrage tel que décrit à l'Article 8 de la licence, sauf indication contraire contenue dans le présent document. Les règles de médiation applicables seront celles de l'Organisation mondiale de la propriété intellectuelle (http://www.wipo.int/amc/fr/mediation/rules) et tout arbitrage sera mené conformément au Règlement d'arbitrage de la Commission des Nations Unies pour le droit commercial international (CNUDCI). 
+Matériel attribué à des tiers. Il incombe aux utilisateurs souhaitant réutiliser des informations ou autres éléments contenus dans cette œuvre qui y sont attribués à un tiers, tels que des tableaux, des figures ou des images, de déterminer si une autorisation est requise pour leur réutilisation et d’obtenir le cas échéant la permission de l’ayant-droit. Toute action qui serait engagée à la suite d’une utilisation non autorisée d’un élément de l’œuvre sur lequel une tierce partie détient des droits ne pourrait l’être qu’à l’encontre de l’utilisateur. 
+Ventes, droits et licences. Les produits d’information de la FAO sont disponibles sur le site web de la FAO (www.fao.org/publications) et peuvent être obtenus sur demande adressée par courriel à: publications-sales@fao.org. Les demandes visant un usage commercial doivent être soumises à:  www.fao.org/contact-us/licence-request. Les questions relatives aux droits et aux licences doivent être adressées à: copyright@fao.org. 
+Couverture: Art&Design srl 
+RÉSUMÉ 
+Les techniques agricoles évoluent rapidement vers un nouveau paradigme – l’agriculture 4.0. Ce modèle de développement permet à la numérisation, à l’automatisation et à l’intelligence artificielle de jouer un rôle clé dans la production agricole, en particulier pour le désherbage et la lutte contre les organismes nuisibles. La voie à suivre est pavée de défis à relever et de possibilités à saisir, s’agissant de passer de la conduite manuelle et de la traction animale à l’utilisation de matériel agricole automatisé et mécanisé dans les pays en développement et de réduire la fracture numérique. L’efficacité de la mécanisation traditionnelle des activités agricoles, caractérisée par l’utilisation de tracteurs et l’exploitation de la puissance des moteurs, sera égalée voire surpassée par celle du matériel automatisé et des robots et par la précision que ceux-ci peuvent offrir. 
+L’agriculture de conservation est une approche qui associe la diversification des cultures, la couverture permanente des sols et leur perturbation minimale (grâce à un labour réduit, par exemple). Elle permet d’améliorer la structure du sol et d’en accroître la teneur en matière organique, d’enrichir la diversité microbienne, d’assurer une meilleure rétention de l’eau et des nutriments et de lutter plus efficacement contre les organismes nuisibles et les maladies, rendant ainsi les sols agricoles plus productifs et plus résilients face au changement climatique. Néanmoins, l’agriculture de conservation nécessite un matériel spécialisé – pour effectuer des semis directs, à la bonne profondeur et selon la densité voulue, par exemple. La robotique agricole peut faciliter ces pratiques respectueuses de l’environnement, en permettant 
+un désherbage localisé, une gestion précise des éléments nutritifs et une lutte ciblée contre les organismes nuisibles, les maladies et les plantes adventices par élimination mécanique ou par l’application localisée de produits chimiques. Les robots agricoles pourront également être employés pour accomplir les tâches pénibles, surtout lorsque la disponibilité de main-d’oeuvre est limitée, contribuant ainsi à améliorer la viabilité sociale. L’essor de l’agriculture 4.0 offrira de nouvelles possibilités qui permettront d’attirer les jeunes et les entrepreneurs dans ce secteur et de s’attaquer ainsi à certaines des causes de l’exode rural tout en contribuant à la composante économique du développement durable. 
+Le présent rapport analyse l’application de la robotique dans le domaine de la mécanisation agricole à des fins de production ainsi que son applicabilité spécifique dans le contexte du développement durable. Il prend en compte les dimensions sociales, économiques et environnementales de son adoption et en étudie les potentialités. L’étude présente certaines des caractéristiques techniques de la robotique et met en avant les principaux défis à relever pour en favoriser l’adoption, s’agissant notamment de l’existence d’infrastructures adaptées, des capacités des parties prenantes, de la viabilité économique et de la propriété des données. Le présent rapport contient une analyse des principaux domaines d’intervention nécessaires au regard des différentes parties prenantes, en particulier les petits exploitants agricoles dans les pays en développement. 
+TABLE DES MATIÈRES 
+AVANT-PROPOS vii 
+REMERCIEMENTS viii 
+SIGLES ET ACRONYMES ix 
+1 
+GÉNÉRALITÉS 1 
+1.1 
+Objectif du rapport 3 
+2 
+AGRICULTURE 4.0: DRONES, ROBOTS, DONNÉES 
+ET TECHNOLOGIES DE L’INFORMATION ET DE LA 
+COMMUNICATION (TIC) 5 
+2.1 
+Robotique agricole 7 
+2.2 
+Utilisation de robots agricoles 8 
+3 
+FACTEURS D’ADOPTION 11 
+3.1 
+Défis à relever 12 
+4 
+PAYS EN DÉVELOPPEMENT ET PERSPECTIVES 
+DE LA ROBOTIQUE AGRICOLE 15 
+4.1 
+Applications agricoles 15 
+4.2 
+Possibilités d’entrepreneuriat agricole 16 
+4.3 
+Atténuation de la pénibilité du travail des petits 
+exploitants agricoles 17 
+4.4 
+Contribution à la réalisation des objectifs 
+de développement durable 17 
+5 
+CONCLUSION 19 
+BIBLIOGRAPHIE 21 
+ANNEXE - Typologies et exemples de robots agricoles 23 
+LISTE DES FIGURES 
+1. 
+Superficie moyenne des exploitations agricoles, 1960-2000 
+2. 
+ Comparaison entre une exploitation agricole intelligente (agriculture 4.0) et une petite exploitation agricole (agriculture conventionnelle) 
+3. 
+ Cycle de gestion fondée sur l’information pour une agriculture avancée 
+4. 
+Représentation graphique des activités agricoles selon le paradigme de l’agriculture 4.0 
+5. 
+ Représentation d’un robot agricole effectuant un désherbage mécanique par faisceau de lumière 
+6. 
+Robot à énergie solaire 
+7. 
+Plateforme auto-alimentée 
+8. 
+Petit robot de désherbage 
+9. 
+Robot agricole spécialisé pour la récolte de fraises 
+10. 
+Couverture du signal de la technologie 3G en France et en Zambie 
+11. 
+Projet Hands Free Hectare: une moissonneuse des années 1980 et un petit tracteur classique à quatre roues tirant une remorque 
+12. 
+Objectifs de développement durable à la réalisation desquels la robotique agricole peut contribuer 
+©Agerris 
+AVANT-PROPOS 
+La mécanisation joue un rôle déterminant dans l’efficacité des systèmes agricoles. Elle permet de passer d’une agriculture de subsistance à une agriculture axée sur le marché et offre des emplois non agricoles attrayants pour les femmes comme pour les jeunes, tout en ayant un effet catalyseur sur le développement rural. En matière de mécanisation, les options sont multiples et couvrent les outils, matériels et machines agricoles qui sont utilisés pour la préparation du sol, la gestion des cultures, la récolte, les activités après récolte et le traitement ainsi que pour toutes les activités menées dans la chaîne de valeur agroalimentaire. 
+On croit à tort que la mécanisation détermine le déplacement de la main-d’oeuvre agricole et favorise l’exode rural. Bien au contraire, elle améliore le bien-être et multiplie les possibilités de travail décent. Par exemple, les tâches de préparation du sol et de désherbage nécessitent moins de temps et d’efforts, ce qui permet d’en atténuer la pénibilité et de dégager du temps à consacrer à des activités non agricoles. Par ailleurs, les activités non agricoles, en particulier la fabrication, l’entretien et la location du matériel, ainsi que les technologies de l’information et de la communication (TIC) et la numérisation, offrent aux femmes et aux jeunes des possibilités d’emploi particulièrement intéressantes. 
+La mécanisation a bien progressé depuis la révolution industrielle et l’invention du moteur à vapeur, mais dans les 15 dernières années les avancées ont été spectaculaires. La conception optimisée des machines agricoles, jointe à la gestion des données numériques, permet aux petits exploitants agricoles d’avoir accès à du matériel automatisé et semi-autonome. 
+Les innovations numériques appliquées aux techniques de mécanisation peuvent rendre l’agriculture plus attrayante pour les jeunes ruraux, surtout dans les pays en développement. Une fois que les infrastructures, les chaînes d’approvisionnement, les services et les dispositifs de formation nécessaires sont en place en milieu rural, des emplois nouveaux et plus attractifs peuvent être créés au profit des campagnes laissées à la traîne lorsque l’agriculture était tributaire d’outils manuels rudimentaires. 
+La fracture qui existe entre les machines à technologie numérique de pointe et les outils à main rudimentaires est considérable. L’Organisation des Nations Unies pour l’alimentation et l’agriculture (FAO) et ses partenaires doivent fournir aux gouvernements l’appui technique voulu pour transformer l’agriculture de manière durable et créer des conditions favorables à cette filière pilotée par le secteur privé. Par ailleurs, la démarche est en harmonie avec les cadres pour une mécanisation agricole durable en Afrique et en Asie, et soutient les efforts mis en oeuvre pour développer des services de location de matériel à petite échelle afin que les agriculteurs puissent avoir accès à la mécanisation. 
+La présente publication donne un aperçu de la prochaine génération de machines agricoles, en particulier les robots à usage agricole, destinées à accélérer le développement rural. 
+XIA, Jingyuan 
+Directeur de la  Division de la production végétale  et de la protection des plantes 
+AGRICULTURE 4.0: ROBOTIQUE AGRICOLE ET MATÉRIEL AUTOMATISÉ AU SERVICE D’UNE PRODUCTION AGRICOLE DURABLE 
+REMERCIEMENTS 
+Les auteurs tiennent à remercier tous ceux qui ont apporté leur contribution à l’élaboration du présent document au cours de ces deux dernières années. Nous remercions en particulier Fenton Beed, chef de l’équipe chargée des systèmes de culture et de mécanisation ruraux et urbains, au sein de la Division de la production végétale et de la protection des plantes de l’Organisation des Nations Unies pour l’alimentation et l’agriculture (FAO), dont le soutien sans faille et les idées ont permis de concrétiser le rapport. 
+Salah Sukkarieh, de l’Université de Sydney, a donné des indications précieuses durant les premières étapes de l’élaboration du document et fourni son soutien lors du processus d’examen. 
+Brian Sims et Karim Houmy, spécialistes internationaux en matière de mécanisation durable, ont également apporté leurs conseils avisés lors des premières phases de réalisation de la présente publication. 
+Shane Harnett, consultant en communications (FAO), a mené un examen approfondi du projet de document, dont il a mis au point le texte et la structure de manière constructive, contribuant ainsi à améliorer l’ensemble du rapport. 
+Verónica Saiz Rubio et Francisco Rovira Más, de l’Universidad Politécnica de Valencia, ont autorisé l’utilisation du contenu de leurs publications validées par les pairs. 
+Nos remerciements vont aussi à Allan Hruska et à David Hughes pour leurs contributions au sujet des applications de la FAO utilisant l’intelligence artificielle pour la lutte contre les organismes nuisibles. 
+Joseph Mpagalille, ingénieur agronome (FAO), a apporté une importante contribution lors de l’examen final du rapport. 
+SIGLES ET ACRONYMES 
+CGIAR 
+Consultative Group for International Agricultural Research (groupe consultatif pour la recherche agricole internationale) 
+CIMMYT 
+Centre international d’amélioration du maïs et du blo 
+FAO 
+Organisation des Nations Unies pour l’alimentation et l’agriculture 
+FIDA 
+Fonds international de développement agricole 
+FIRA 
+International Forum of Agricultural Robotics (forum international de la robotique agricole) 
+GPS 
+Global Positioning System (système de positionnement mondial) 
+GSMA 
+Global System for Mobile Communications (système mondial de téléphonie mobile) 
+Lidar 
+Laser imaging detection and ranging (détection et estimation de la distance par laser) 
+MMS 
+Multimedia message service (service d’envoi de messages multimédias) 
+NOAA 
+National Oceanic and Atmospheric Administration (administration nationale des océans et de l’atmosphère) 
+ODD 
+objectif de développement durable 
+SMS 
+Short message service (service d’envoi de messages courts) 
+TIC 
+technologies de l’information et de la communication 
+WaPOR 
+Water productivity open access portal 
+(portail de données en libre accès sur la productivité de l’eau) 
+3D 
+trois dimensions 
+1.  GÉNÉRALITÉS 
+La mécanisation agricole fournit l’énergie et le matériel dont les agriculteurs ont besoin, en champ comme à l’exploitation, pour préparer le sol, entretenir les cultures, entreposer les récoltes et traiter les produits. Au fil des ans, la technique a évolué et l’on est passé de simples outils à main et machines à traction animale à du matériel motorisé sophistiqué. Malheureusement, les outils manuels et la traction animale sont encore couramment utilisés dans les pays en développement, ce qui pèse sur la productivité agricole et menace les moyens d’existence des petits exploitants agricoles. L’essor de la mécanisation répond donc au souhait de réduire la pénibilité du travail et d’alléger les tâches les plus dures en périodes de pointe (préparation du sol, désherbage, récolte, transport, etc.). 
+La disponibilité d’un matériel adéquat et performant et son utilisation au moment opportun conditionnent le passage d’une agriculture de subsistance à une agriculture axée sur le marché. Des semis précoces et des conditions d’ensemencement optimales (sol, température et humidité) revêtent une grande importance, en considération notamment de l’irrégularité croissante des précipitations et des températures. Une agriculture fondée sur les données, qui utilise des solutions robotiques incorporant des techniques d’intelligence artificielle, est à la base d’une agriculture durable à l’avenir (Saiz-Rubio et Rovira-Mas, 2020). 
+L’Assemblée générale des Nations Unies a exhorté les États Membres, les organismes compétents des Nations Unies et les autres parties concernées à redoubler d’efforts pour améliorer la mise au point de technologies agricoles durables, ainsi que leur transfert et leur diffusion selon des modalités équitables, transparentes et arrêtées d’un commun accord dans les pays en développement, en particulier les pays les moins avancés, notamment aux niveaux 
+bilatéral et régional, et pour soutenir l’action menée à l’échelon national en vue d’encourager l’utilisation du savoir-faire et des technologies agricoles d’origine locale, de promouvoir la recherche agronomique, l’accès aux connaissances et à l’information grâce à des stratégies appropriées de communication au service du développement, et de permettre aux femmes des zones rurales, de même qu’aux hommes et aux jeunes, d’accroître durablement leur productivité agricole, de réduire les pertes après récolte et d’améliorer la sécurité alimentaire et nutritionnelle. 
+Figure 1
+À ce jour, l’utilisation de la force motrice en agriculture a été prépondérante dans les pays développés, le tracteur constituant la principale source d’énergie agricole. Ces dernières années, on a constaté une croissance constante des tracteurs et autres machines (les moissonneuses, par exemple), en termes de taille et de puissance, visant d’une part à en améliorer l’efficacité et d’autre part à répondre aux exigences des exploitations agricoles, toujours plus grandes, dans les pays développés. La réalité est cependant bien différente dans la plupart des régions du monde, la superficie des exploitations agricoles tendant à diminuer dans les pays à faible revenu (). 
+Le manque d'énergie agricole est parfois tenu pour responsable des mauvaises récoltes de la faiblesse des rendements et de la pénibilité des tâches et de l’agriculture de subsistance (Murray et coll., 2016). Ce n’est pourtant pas la seule raison et bien d’autres facteurs – par exemple, le climat, la qualité des semences, les pratiques adoptées, les organismes nuisibles et les maladies –, conditionnent le rendement final. Par ailleurs, le besoin urgent d’augmenter la production pour nourrir une population en expansion sur un territoire restreint accentue d’autant plus la pression qui s’exerce sur les systèmes agricoles et leur productivité. 
+90 3.0 2.5 2.0 1.5 1.0 0.5 0.0 1960 1970 1980 1990 2000 80 70 60 50 40 30 20 10 0 HectaresHectares ● Pays à revenu élevé hors     Australie (30), axe principal ●Asie du Sud (5),      axe secondaire ● Autres pays à faible revenu et     à revenu intermédiaire (19),     axe secondaire ● Amérique latine et Caraïbes           (18), axe principal 
+Figure 1. Taille moyenne des exploitations, 1960-2000 
+Note: Les chiffres figurant entre parenthèses indiquent le nombre des pays pris en compte dans la région correspondante. 
+Source: Lowder, Skoet et Raney (2016). 
+Il est courant d’associer la mécanisation aux tracteurs. Or, le tracteur n’est qu’une source d’énergie mobile universelle ayant la capacité de tirer, pousser ou mettre en action une série d’outils, d’appareils et de matériels permettant d’effectuer des travaux agricoles; pour remplir pleinement ses fonctions, un tracteur doit être doté de l’équipement adapté. La mécanisation s’applique à de nombreuses opérations tout au long du cycle de production des cultures et de la chaîne de valeur: elle ne se limite pas au seul usage de tracteurs. Utilisée correctement, la mécanisation peut permettre de réduire la main-d’oeuvre nécessaire, d’améliorer le calendrier des travaux, d’accroître le rendement des cultures, d’assurer une application plus précise et plus efficace des intrants coûteux et de valoriser les produits. 
+ L’Organisation des Nations Unies pour l’alimentation et l’agriculture (FAO) s’emploie actuellement à promouvoir la mécanisation durable dans les pays en développement, dans l’objectif spécifique de permettre aux petits exploitants agricoles de tirer parti de la mécanisation en accédant à des services de location de matériel agricole(principalement de tracteurs à deux ou quatre roues, de petite ou moyenne taille), tout en aidant les entrepreneurs ruraux à lancer des services de location.1 
+L’association qui est faite habituellement entre la mécanisation et le tracteur conduit par l’agriculteur est appelée à cesser dans les décennies à venir: la mise au point de technologies nouvelles et innovantes ayant la capacité d’améliorer l’efficacité de la production agricole à des niveaux sans précédent grâce à l’automatisation des machines et du matériel, a déjà amorcé le changement. 
+1 En 2018, la FAO et le Centre international d’amélioration du maïs et du blé (CIMMYT) ont publié un manuel de formation pour la création d’entreprises de location de matériel agricole, intitulé Hire services as a business enterprise (FAO, 2018), destiné à aider les fournisseurs de services de mécanisation agricole existants et potentiels. Le manuel insiste sur les aspects techniques et relatifs à la gestion des services de location dans l’objectif de renforcer les capacités des entrepreneurs ruraux et d’encourager la mise en place de services propres à favoriser le développement rural et à améliorer la productivité agricole. 
+1.1 Objectif du rapport 
+Le présent rapport étudie les possibilités que les nouvelles avancées technologiques liées à l’automatisation et à l’agriculture de précision (la robotique, par exemple) peuvent offrir à l’agriculture dans les pays en développement. Ces technologies visent principalement à aider les agriculteurs appelés à faire face au coût de la main-d’oeuvre nécessaire pour les opérations de récolte, ainsi qu’à répondre au problème de la raréfaction de la main-d’oeuvre disponible pour l’ensemble des travaux agricoles. Les économies en termes de coût et de temps (grâce à une application de précision des intrants) représentent un point de départ pour les exploitations agricoles à vocation commerciale. Néanmoins, ces technologies pourraient aussi être destinées aux petits exploitants agricoles qui, compte tenu des tendances migratoires irréversibles vers 
+les villes, représentent aujourd’hui une population en déclin, vieillissante et composée principalement de femmes. Là où l’agriculture demeure un moyen d’existence plutôt qu’une activité génératrice de revenus, les agriculteurs pourraient tirer parti de la technologie et des innovations. L’impact positif de technologies adaptées peut donner aux femmes rurales les moyens de progresser vers un statut d’égalité dans la société, et attirer les jeunes vers le secteur agricole. 
+tableau 1
+Le présent rapport étudie les applications possibles des nouvelles techniques agricoles, illustre les tendances actuelles et examine certains des principaux défis à relever afin que leur adoption puisse conduire à une mécanisation agricole durable dans les pays en développement. Une liste de termes spécifiquement applicables à l’agriculture 4.0 est présentée dans le . 
+TABLEAU 1. Termes de référence de l’agriculture 4.0 
+Agriculture 4.0 Agriculture intégrant une série de technologies innovantes appliquées à la production de denrées agricoles. Au nombre de ces innovations, qui visent à améliorer l’efficacité de la production, figurent en particulier l’agriculture de précision, l’Internet des objets et les mégadonnées. 
+Agriculture de précision Concept de gestion agricole fondée sur l’observation de la variabilité des conditions des cultures à l’échelle inter- et intra-parcellaire, leur évaluation et des interventions adaptées. La recherche dans le domaine de l’agriculture de précision a pour but de définir un système d’aide à la décision pour la gestion globale de l’exploitation en vue d’assurer une utilisation optimale des intrants tout en préservant les ressources. 
+Intelligence artificielle La capacité d’un ordinateur ou d’un robot commandé par ordinateur d’accomplir des tâches généralement associées à des êtres intelligents (Encyclopaedia Britannica, 2020). Il peut s’agir de programmes qui agissent, fonctionnent ou pensent comme des êtres humains ou qui ont leur propre manière rationnelle de traiter l’information et/ou de se comporter. Les applications de l’intelligence artificielle dans les divers volets du développement technologique sont infinies. 
+Télédétection La science permettant d’obtenir à distance des informations relatives à des objets ou à des sites, généralement par avion ou par satellite (NOAA, 2020). Les images peuvent être acquises au moyen de capteurs actifs ou passifs, selon les différentes longueurs d’ondes du spectre lumineux. Les capteurs passifs enregistrent la lumière telle qu’elle est réfléchie par la surface terrestre, tandis que les capteurs actifs utilisent leurs propres stimuli pour produire l’image, tout comme la lumière laser. Les applications de télédétection pour la gestion des ressources naturelles (l’utilisation des terres agricoles, par exemple) sont utiles pour la surveillance de la production agricole, du rendement et de la sécheresse, par exemple. 
+Technologie de la chaîne de blocs Système par lequel une liste grandissante d’enregistrements – appelés blocs – forme une chaîne sécurisée par cryptographie. Chaque bloc contient un hachage cryptographique du bloc précédent et des données d’horodatage et de transaction. Cette base de données distribuée contient les enregistrements (représentés par les blocs) de tous les événements numériques ou transactions effectués et partagés entre les agents participants (Crosby et coll., 2015). 
+Internet des objets Infrastructure mondiale par laquelle des objets physiques et entités virtuelles à identité unique sont identifiés et intégrés sans discontinuité (dans le respect des exigences de sécurité et de confidentialité) au réseau d’information associé, où ils sont en mesure d’offrir et de recevoir des services qui constituent des éléments de processus opérationnels définis dans l’environnement dans lequel ils deviennent actifs (Kiritsis, 2010). Dans le contexte de l’agriculture, tout élément intervenant dans la chaîne de valeur agricole produira des données qui pourront être traitées par la suite à des fins diverses. 
+Technologies de l’information et de la communication (TIC) Différents types de technologies permettant de transmettre des informations aux utilisateurs par un système de télécommunications, à savoir notamment: réseaux sans fil, système Bluetooth, Internet, téléphones mobiles, SMS et MMS. 
+Lidar Méthode associant des capteurs de différentes fréquences et de divers types de lumière, qui permet de déterminer des distances pouvant être ensuite utilisées pour la création d’images en 3D. Un faisceau laser est employé pour produire la lumière qui est réfléchie sur la surface, puis saisie par un capteur. Le lidar utilise les ondes lumineuses dans le spectre ultraviolet, visible et proche infrarouge. Il s’agit d’une technologie qui est employée communément dans les véhicules et les équipements autonomes. 
+2.  AGRICULTURE 4.0 
+drones, robots, données et technologies de l’information et de la communication (TIC) 
+L’agriculture évolue avec la science et la technologie et l’arrivée de l’Internet des objets dans le paysage agricole n’est plus qu’une question de temps. Grâce aux améliorations techniques, les nouvelles technologies agricoles devraient permettre: 
+← 
+d’optimiser l’efficacité de la production; 
+← 
+d’optimiser la qualité des produits; 
+← 
+de réduire au maximum l’impact environnemental; 
+← 
+de réduire au maximum les risques liés à la production. 
+Quelques exemples de ces améliorations sont en particulier: l’agriculture de précision, l’adoption de 
+la technologie de la chaîne de blocs dans les chaînes de valeur (transport, stockage, lavage, calibrage, emballage, étiquetage ou traitement), l’intelligence artificielle appliquée au diagnostic des organismes nuisibles et des maladies et au choix des stratégies de lutte possibles, la télédétection (imagerie satellitaire et par drone) et le déploiement de capteurs (au sol, dans les cultures ou pour stations météorologiques) ou de matériel automatisé pour les travaux agricoles. La figure 2 présente une grille conceptuelle comparative entre l’agriculture conventionnelle actuelle et l’agriculture 4.0. 
+TECHNOLOGIE ANALOGIQUE OU MÉCANIQUE ABSENCE DE SYSTÈMES DE DÉTECTION ABSENCE DE DONNÉES OU D’ENREGISTREMENTS TRAVAIL MANUEL OUTILS À MAIN OU TRACTION ANIMALE EXPÉRIENCE DE L’EXPLOITANT AGRICULTURE INTELLIGENTE 
+Figure 2. Comparaison entre une exploitation agricole intelligente (agriculture 4.0) et une petite exploitation agricole (agriculture conventionnelle) 
+Notes: Le terme robotique renvoie aux systèmes ou machines dotés de niveaux d’intelligence accrus leur permettant de fonctionner en autonomie, ou à la conception d’une nouvelle machine intelligente destinée à une application déjà existante. Par matériel automatisé, on entend les systèmes existants, dont certains éléments ont été automatisés afin d’en permettre le transport ou le fonctionnement sans intervention humaine. 
+Les principaux acteurs de ce changement ne sont pas seulement les industries de matériel agricole traditionnel; ce sont aussi les agriculteurs. La télédétection, le traitement de données, les télécommunications, l’intelligence artificielle et la robotique, ainsi que la gamme de plus en plus vaste de leurs utilisations, imposent l’adoption de nouvelles approches qui prennent en compte non seulement l’agronomie, mais aussi d’autres facteurs relatifs aux infrastructures, à la législation et aux connaissances. La confidentialité et la propriété des données générées au sein des exploitations agricoles, la géolocalisation, l’assurance des véhicules sans conducteur et les informations cryptées sont des questions qui feront toutes partie intégrante d’une agriculture numérique. S’agissant d’illustrer le rôle clé que jouera la gestion de l’information dans ce nouveau modèle d’exploitation agricole, la figure 3 présente les différentes étapes de l’agriculture numérique et les divers éléments qui interviennent, à savoir: des capteurs surveillent les cultures, générant ainsi des données qui sont saisies par une plateforme; celles-ci sont ensuite traitées au moyen d’un logiciel spécifique et de techniques d’intelligence artificielle; plusieurs possibilités d’intervention sont définies; l’agriculteur décide alors comment agir sur ses cultures (soit directement à l’aide de son propre matériel, soit indirectement au moyen de machines automatisées). La robotique agricole peut s’appliquer à toutes les étapes sur une seule plateforme ou être spécialisée; il s’agit d’une technologie complexe et il est rare que l’utilisateur final du robot (l’agriculteur) ait le savoir-faire nécessaire et une bonne connaissance de l’ensemble du processus et des éléments qui interviennent dans le cycle de gestion. 
+Selon le paradigme de l’agriculture 4.0, l’interaction entre l’agriculteur et la machine est au coeur même du fonctionnement de l’exploitation agricole, c’est-à-dire que l’agriculteur prend des décisions et utilise du matériel interconnecté fonctionnant de manière autonome, en s’inspirant du processus d’information illustré plus haut. Dans les exploitations agricoles à vocation commerciale d’aujourd’hui, l’agriculteur en pleine possession des compétences requises et des connaissances existantes en matière d’agriculture devra devenir une sorte de gestionnaire des technologies de l’information, opérant à partir d’un bureau ou devant un écran (ordinateur, téléphone portable, tablette, etc.), et non plus un simple opérateur travaillant sur le terrain, guidant un engin et procédant à des réglages manuels. Pour la gestion du bétail, des opérateurs qualifiés seront encore nécessaires, mais ils devront être dotés de nouvelles compétences en matière de TIC et d’automatisation. Tel est l’avenir envisagé pour les pays dont le secteur agricole est très développé; cependant, pour la plupart des pays et pour la majeure partie des petits exploitants agricoles, il s’agit d’une vision encore bien éloignée de la réalité. 
+L’agriculture 4.0 offre de nombreuses possibilités. Les drones et autres plateformes de télédétection peuvent fournir des informations en temps réel; ils produisent des images, capturent différents paramètres agronomiques et alertent les agriculteurs de l’évolution des cultures, de l’état du sol, de la recrudescence ou du risque d’organismes nuisibles et de maladies, ainsi que de la prolifération de plantes adventices. Le degré d’interconnexion entre les divers éléments du matériel et les systèmes, 
+CULTURE PLATEFORME DÉCISION INTERVENTION DONNÉES Outils Capteur Logiciel Intelligence artificielle 
+Figure 3. Cycle de gestion fondée sur l’information pour une agriculture avancée 
+Source: Sáiz-Rubio et Rovira-Más (2020). 
+impliquant des niveaux élevés de collecte, d’analyse et de traitement d’information, sera sans précédent dans le secteur agricole. Toutes ces informations doivent être traitées par l’exploitant agricole qui est alors en mesure de déterminer quelle est la solution optimale ou l’intervention nécessaire. L’agriculteur peut recourir à des techniques conventionnelles ou utiliser un matériel autonome pour agir sur le terrain ou intervenir dans des installations agricoles contrôlées comme les serres ou les fermes verticales. Le matériel peut utiliser des données de télédétection pour optimiser l’utilisation d’intrants en fonction des besoins particuliers de la parcelle, de la culture ou du sol. Une image conceptuelle de l’agriculture 4.0 est représentée à la figure 4. 
+L’interconnectivité de dispositifs mécaniques en évolution rapide est une importante composante de l’agriculture 4.0 qui, cependant, ne doit pas faire oublier l’importance des algorithmes transparents qui pilotent ces instruments. L’analyse des données générées par ces dispositifs sera interprétée par apprentissage automatique, conduisant dans certains cas à l’intelligence artificielle. Un exemple est le programme PlantVillage (PlantVillage, 2013) qui a accès à une vaste collection d’images et permet, par l’apprentissage automatique, de fournir des diagnostics plus précis que par d’autres moyens (comme la consultation d’un guide de lutte intégrée ou l’utilisation de la caméra d’un téléphone pour diagnostiquer les maladies des cultures); il est relié aux systèmes satellitaires via des sites web tels que le Portail de données en libre accès sur la productivité de l’eau (WaPOR) de la FAO (FAO, 2019). Les algorithmes sont transparents, ayant été élaborés en collaboration avec les agronomes d’institutions publiques telles que la FAO et l’Organisation du système CGIAR. Toutefois, la transparence ne peut être tenue pour acquise dans le secteur privé, où les questions de propriété intellectuelle exigent une étroite surveillance régie par un code spécifique. Dans le contexte de l’agriculture 4.0, les machines peuvent commettre des erreurs que les agriculteurs et d’autres acteurs auront du mal à déceler. 
+Les exploitants agricoles et les professionnels de l’agriculture devront acquérir de nouvelles compétences afin d’être en mesure de gérer tous ces nouveaux systèmes et de pouvoir évaluer la meilleure façon d’accomplir les tâches agricoles au regard de tous les paramètres possibles. Les difficultés qui attendent l’agriculteur ne doivent pas être sous-estimées! De même, les secteurs public et privé seront confrontés à de nouveaux défis liés au renforcement des capacités relatives à ces nouvelles technologies. 
+81 Seeding67 Plowing 
+Figure 4. Représentation graphique des activités agricoles selon le paradigme de l’agriculture 4.0 
+2.1 Robotique agricole 
+Il n’existe pas de définition officielle du terme «robot agricole», ni de reconnaissance formelle de la fonction des robots conçus pour accomplir des tâches en agriculture. Lowenberg-DeBoer et coll. (2019) proposent de définir les robots opérant sur le terrain en agriculture comme suit: dispositif mécatronique mobile et autonome d’aide à la décision, effectuant des tâches dans le domaine de la production agricole (préparation du sol, semis, repiquage, désherbage, traitement antiparasitaire et récolte, par exemple), sous surveillance humaine, mais sans intervention directe de la personne. Bechar et Vigneault (2017) définissent les robots agricoles comme étant des machines de perception programmables conçues pour accomplir des tâches agricoles diverses, telles que la préparation du sol, le repiquage, la pulvérisation de produits et la récolte sélective (figure 5). Le terme «robot agricole» s’applique concrètement à des machines autonomes capables d’effectuer, sur le terrain, des tâches agricoles répétitives diverses – allant de la préparation du sol à la récolte –, sans aucune intervention humaine directe. 
+Dans des environnements évolutifs et non structurés, l’efficacité des robots agricoles peut être parfois insuffisante, et cela en raison des incertitudes inhérentes au contexte, de la méconnaissance du milieu opérationnel et du caractère imprévisible des 
+événements et des conditions environnementales. En 2019, comme il a été indiqué lors du FIRA, le forum international de la robotique agricole qui s’est tenu à Toulouse, on recensait plus de 60 projets connus de développement de robots agricoles dans le monde (FIRA, 2018) et leur nombre ne cesse de croître. Ces robots, qui diffèrent en termes de taille, sont conçus pour une grande variété d’applications et utilisent différentes technologies. Actuellement, seul un petit nombre d’entre eux sont commercialisés, mais dans les prochaines années de nouveaux projets seront lancés et la disponibilité augmentera. Cette technologie, qui est à ses débuts, vise à répondre aux demandes auxquelles doivent actuellement faire face les exploitants agricoles, en particulier ceux qui pratiquent une agriculture commerciale axée sur la production intensive, secteur qui a les moyens d’investir dans ces nouvelles techniques. Cependant, il est important que la demande de robots agricoles réponde aux exigences souvent très spécifiques des agriculteurs. Selon la FAO (2019b), dans le monde, environ 90 pour cent des agriculteurs sont des petits exploitants et la technologie doit leur être accessible. 
+2.2 Utilisation de robots agricoles 
+figures 6 à 8 
+Un robot agricole peut effectuer les tâches les plus diverses. Les premiers robots à usage agricole disponibles dans le commerce ont principalement trois fonctions: désherbage, surveillance des organismes nuisibles et des maladies et récolte de cultures spécialisées (baies ou légumes). Ils permettent de réaliser des économies en réduisant les besoins en main-d’oeuvre (désherbage et récolte), le recours aux intrants (pesticides) ainsi que les pertes de rendement résultant d’une détection tardive des organismes nuisibles et des maladies. Les présentent quelques exemples de robots spécialisés déjà commercialisés. 
+Il existe autant d’utilisations possibles de robots en agriculture que de tâches à effectuer. Des prototypes permettent déjà de préparer le sol, de faire les semis, de lutter contre les organismes nuisibles et de récolter les cultures céréalières (orge ou maïs, 
+GPS Wi-Fi CPU Sensors ©Agerris 
+Figure 5. Représentation d’un robot agricole effectuant un désherbage mécanique par faisceau de lumière 
+©Agerris 
+Figure 6. Robot à énergie solaire (Agerris Farmhand, Australie) 
+Note: Il permet de lutter contre les mauvaises herbes par un désherbage mécanique ciblé. Source: Agerris (2020). 
+©Agrointelli 
+Figure 7. Plateforme auto-alimentée (Agrointelli, Danemark) 
+Note: Elle permet de préparer le sol, de semer ou de désherber les cultures conventionnelles au moyen d’outils standards équipant les tracteurs. 
+Source: Agrointelli (2018). 
+©Naio Technologies 
+Figure 8. Petit robot de désherbage (OZ, France) 
+Note: l permet de désherber dans les cultures en ligne et dans les vergers. 
+Source: Naio Technologies (2016). 
+par exemple). L’automatisation du matériel agricole peut être effectuée selon différentes approches, soit en rendant des machines existantes utilisables de façon autonome (sans conducteur), soit en réalisant de nouvelles plateformes autonomes capables d’exécuter des tâches. Ces nouvelles plateformes sont généralement très sophistiquées et de nouveaux types de matériel sont constamment mis au point; néanmoins, des robots agricoles rudimentaires, conçus pour effectuer des tâches simples, peuvent déjà aider les agriculteurs pour toutes sortes d’activités. 
+Le niveau de complexité est étroitement lié aux exigences en matière de coût et d’entretien – comme pour tout matériel technologique. Pour que ces technologies soient adoptées sur le terrain, il faut que les agriculteurs adaptent leurs pratiques agricoles et leurs capacités en conséquence. 
+On trouvera à l’annexe des exemples de robots agricoles déjà commercialisés ou en projet. 
+  Encadré 1. 
+  Dino, le robot qui désherbe les cultures 
+Dino est l’un des robots à usage agricole mis au point par la société Naïo Technologies (France). Ce robot est spécialisé dans le désherbage mécanique des cultures maraîchères; il reconnaît les plantes adventices dans les rangs de la culture et, grâce à l’intelligence artificielle appliquée à la reconnaissance d’image, il est capable de distinguer les mauvaises herbes de la plante commerciale. Il est déjà en production et plus d’une centaine d’unités ont été vendues à des producteurs de cultures maraîchères de grande valeur. Le désherbage mécanique permet d’annuler les coûts et les risques qui sont associés à l’utilisation d’herbicides. Il permet aussi de réduire le coût de la main-d’oeuvre, dans la mesure où une seule personne peut manoeuvrer simultanément jusqu’à trois robots. 
+La technologie en est encore à ses débuts, si bien que les coûts sont élevés et que les potentialités ne sont pas pleinement exploitées; le prochain défi consiste à doter le robot de l’intelligence artificielle, afin qu’il puisse reconnaître les plantes et désherber entre les plantes dans les rangs même de la culture. 
+Source: Bloch, S. 2019. Robotic weeders are racing to replace glyphosate and dicamba. Dans: The Counter [en ligne]. New York. [consulté le 4 août 2020]. https://newfoodeconomy.org/ro-bot-weeders-glyphosate-dicamba-herbicide-replacement/ 
+©Naio Technologies 
+3. FACTEURS D’ADOPTION 
+À l’heure actuelle, les principaux facteurs propres à inciter les agriculteurs à investir dans des robots agricoles sont des considérations d’ordre économique et environnemental. 
+L’adoption de robots dans les exploitations agricoles commerciales offre la possibilité de réaliser des économies considérables. En effet, les exploitants qui pratiquent l’agriculture à des fins commerciales ont souvent bien du mal à se procurer la main-d’oeuvre dont ils ont besoin en période de récolte, surtout pour les cultures de fruits et de légumes. Les robots agricoles peuvent permettre de pallier cette pénurie, tout en réduisant le coût de la main-d’oeuvre spécialisée. Par ailleurs, comme ils ne sont pas soumis aux contraintes, d’ordre physique et juridique, qui s’appliquent aux personnes, ils peuvent fonctionner sur de longues périodes. Au moment de la récolte, certains modèles sont même capables de sélectionner les fruits ou les légumes, un à un, en 
+fonction de leur degré de maturation (figure 9). Les robots agricoles permettent à l'agriculteur de réduire les intrants - pesticides, herbicides et fertilisants - avec des implications positives pour l'environnement. Le désherbage mécanique est déjà une réalité; d'autres fonctions en cours de développement comprennent la micro-application d'intrants et la détection précoce des parasites, ce qui permettra de réduire considérablement, voire d'éliminer, le besoin d'intrants. Les agrobots sont également plus légers que les machines conventionnelles (c'est-à-dire les tracteurs avec leurs outils ou les équipements spécifiques pour la pulvérisation ou la récolte) et peuvent ainsi atténuer les problèmes liés au compactage du sol et accéder à des champs qui ne conviennent pas aux machines lourdes (par exemple, les vignobles en pente ou les terrains affectés par des conditions humides). 
+©Agrobot (2020) 
+Figure 9: Robot agricole spécialisé pour la récolte de fraises 
+Note: Plusieurs bras placés entre les roues permettent de cueillir les fruits un à un. Source: Agrobot (2020). 
+3.1 Défis à relever 
+La mise en oeuvre de toute technologie s’accompagne de défis. S’agissant de la robotique agricole, les principaux défis à relever afin d’en faciliter l’adoption sont les suivants: 
+Propriété et gestion des données numériques 
+Les technologies numériques comportent la collecte de données personnelles. Comme dans d’autres secteurs, les données générées par les capteurs des machines agricoles sont utilisées par les entreprises pour leur modèle d’activité; de fait, l’analyse et le traitement des données sont essentiels aux fins du bon fonctionnement et de l’utilisation correcte des robots agricoles. Des lois et règlements spécifiques doivent être clairement définis et toujours axés sur l’agriculteur ou l’utilisateur, afin d’éviter tout abus de la part de tiers. Cela étant, des données sont nécessaires en permanence pour pouvoir perfectionner, concevoir ou exploiter l’intelligence artificielle sur laquelle repose le logiciel qui fait fonctionner le matériel autonome, et cela peut offrir aux agriculteurs l’occasion de monétiser les données produites. La génération de données permet aussi de surveiller les services écosystémiques ou les indicateurs environnementaux (le piégeage de carbone, par exemple). 
+Capacités 
+Comme pour toute nouvelle technologie, le taux d’adoption est fonction de plusieurs facteurs clés: connaissances, aptitudes et capacités. De nombreux agriculteurs peuvent ne pas avoir la capacité de manoeuvrer des robots agricoles ou de comprendre comment ceux-ci fonctionnent. Un bon exploitant agricole n’est pas forcément un expert en technologies numériques ou en automatisation, et il en est de même pour les vulgarisateurs et les prestataires de services. Aussi le renforcement des capacités est-il essentiel afin que les matériels automatisés puissent être adoptés et utilisés correctement; les agriculteurs ne pourront tirer pleinement parti des potentialités des robots agricoles que s’ils ont les capacités requises. 
+Dans un rapport publié par le Fonds international de développement agricole (FIDA) et GrowAsia (Grow Asia Partnership, 2019), il ressortait que le processus d’adoption de technologies numériques de la part des petits exploitants agricoles s’articulait en cinq étapes: 
+← 
+Communication face à face 
+← 
+Communication téléphonique 
+← 
+Discussions de groupe entre pairs 
+← 
+Découverte active 
+← 
+Participation à des services numériques 
+Le processus qui mène à l’adoption d’une série de nouvelles méthodes est complexe et doit être soutenu à tous les niveaux par les différents acteurs. En l’absence d’incitations externes (politiques ou prix du marché, par exemple), le principal moteur du changement est la volonté d’accepter et d’adopter ce changement. 
+Le processus de renforcement des capacités ne doit pas se limiter aux exploitants agricoles déjà en activité. Il est important de préparer les jeunes – les agriculteurs de demain – à s’investir dans le secteur agricole, et cela en les familiarisant aux nouvelles technologies pendant leur scolarité (la programmation et la robotique sont aujourd’hui inscrites dans de nombreux programmes d’études secondaires). En canalisant leur intérêt pour les technologies numériques vers des applications visant l’agriculture, des personnes aux idées innovantes peuvent être attirées par le secteur de la robotique agricole. Il est essentiel d’adapter les programmes universitaires et scolaires, afin que les pays puissent disposer de la main-d’oeuvre qualifiée requise pour exploiter, entretenir et développer les technologies. Par ailleurs, l’acquisition de connaissances ne doit pas être réservée à l’utilisateur final: le renforcement des capacités doit faire intervenir l’ensemble des parties prenantes, des décideurs qui sont appelés à créer les conditions propices au moyen de lois, de mesures d’incitation ou de programmes de formation (dans les secteurs de l’éducation, de l’industrie et de l’agriculture) jusqu’aux agents de vulgarisation, aux techniciens et aux agriculteurs. 
+Adaptation des systèmes de production agricole 
+Les agriculteurs qui introduisent des robots agricoles dans leur système de production ont parfois du mal à les faire fonctionner correctement. On croit souvent à tort que les robots remplaceront tout simplement le matériel existant et qu’ils en rempliront immédiatement les fonctions au sein du système. La réalité est toute autre et, pour obtenir les meilleurs résultats, c’est le système de production qui doit s’adapter au robot. Les exploitants agricoles doivent s’adapter, en termes temporels et de mentalité. Ainsi, s’agissant de l’espacement entre les rangs ou du nivellement du terrain, l'agriculteur habitué 
+à un certain espacement entre les cultures ou à un agencement particulier des cultures (l’architecture des arbres fruitiers, par exemple) doit adapter cet espacement ou agencement pour faire en sorte que celui-ci corresponde exactement aux paramètres opérationnels du robot agricole alors que celui-ci évolue entre les plantes. On constate déjà que les agriculteurs qui s’adaptent en conséquence obtiennent de meilleurs résultats et un rendement accru grâce à l’efficacité des robots agricoles (FIRA, 2018). Actuellement, les robots à usage agricole sont assez coûteux par rapport aux pratiques et matériels classiques; comme pour toute nouvelle technologie, les prix des premiers modèles disponibles sont très élevés. Les robots sont intéressants pour les agriculteurs, dans toutes sortes de situations et dans les contextes les plus divers. Néanmoins, certains robots peuvent être conçus expressément pour être utilisés dans un lieu précis, en fonction des paramètres d’une exploitation donnée; cela limite la facilité d’utilisation du matériel et va à l’encontre des modèles d’activité fondés sur le partage des intrants ou la prestation de services. 
+Prix d’achat 
+Le prix d’achat, ou le coût d’utilisation, peut être supérieur aux fonds disponibles et miner ainsi la rentabilité de la production. Par ailleurs, dans les grandes exploitations à vocation commerciale qui produisent des cultures maraîchères à haute 
+valeur ajoutée et où les coûts de la main-d’oeuvre sont élevés en périodes de récolte (en raison de leurs besoins en main-d’oeuvre qualifiée ou de la pénurie de ressources humaines disponibles), les agriculteurs trouvent déjà qu’il est lucratif et de plus en plus avantageux d’utiliser des robots agricoles spécialisés qui leur permettent de réduire les coûts et d’être moins tributaires d’une main-d’oeuvre insuffisante. Les robots à usage agricole sont déjà employés dans certaines exploitations horticoles hautement spécialisées – montrant ainsi qu’il est possible de réduire les coûts d’opportunité grâce à l’automatisation –, mais il faut néanmoins trouver des modèles d’activité rentables lorsque l’agriculteur n’est pas nécessairement le propriétaire du robot, mais peut néanmoins tirer parti de la technologie. Deux solutions possibles, déjà adoptées dans de nombreux systèmes de production agricole, sont la prestation de services et la propriété coopérative. 
+Infrastructures des technologies de l'information 
+Le concept d’agriculture 4.0 est étroitement associé à l’utilisation des TIC et fortement tributaire des possibilités d’accès à des infrastructures des technologies de l'information adéquates pour l’acquisition, le traitement et le partage des données. L’usage de robots agricoles est subordonné à la disponibilité d’infrastructures adaptées et, pour pouvoir fonctionner de manière autonome, ceux-ci se servent de données issues de capteurs intégrés, 
+Figure 10. Couverture du signal de la technologie 3G en France et en Zambie 
+Note: Les zones colorées représentent la couverture du signal: 675 417 km2 en France et 752 614 km2 en Zambie. Source: GSMA (2020). 
+de capteurs à distance (imagerie satellitaire), de capteurs externes (imagerie par drone, sondes de sol), d’outils programmés ainsi que des multiples paramètres agronomiques enregistrés dans leur logiciel. Toutes ces informations doivent être recueillies et partagées et l’accès à des infrastructures informatiques fiables est donc essentiel, grâce à une couverture du signal, à une alimentation en énergie et à une puissance adéquates pour le transfert de données, non seulement pour le positionnement par satellite (système de positionnement global [GPS], par exemple), mais aussi pour le téléphone ou le signal radio. Non seulement le robot agricole doit être alimenté par des données pour pouvoir fonctionner, mais le gestionnaire de l’exploitation agricole et les opérateurs doivent aussi le manoeuvrer, traiter les données qu’il génère pendant son fonctionnement et prendre des décisions sur la base des informations disponibles. Il s’agit là d’un défi de taille dans la mesure où les zones rurales ne sont pas toutes couvertes par la bande passante d’un signal téléphonique, surtout dans les pays en développement (figure 10). Dans les contextes et les situations difficiles, des solutions 
+d’ingénierie peuvent être nécessaires pour adapter les TIC des robots à usage agricole aux conditions des pays en développement. 
+Entretien et services techniques 
+Pour que l’adoption de robots à usage agricole soit possible, il est essentiel que des services d’assistance technique et des services après-vente adaptés soient disponibles. Comme pour d’autres technologies nouvelles, acheter un matériel automatisé ou une nouvelle technologie pour découvrir peu de temps après que les pièces de rechange ne sont pas disponibles à une distance ou dans un délai raisonnables, ne serait qu’une perte de temps et d’argent. Il en est de même pour les techniciens spécialisés et qualifiés appelés à réparer le matériel et à fournir des services d’entretien; de plus, dans le cas des robots à usage agricole, les spécialistes nécessaires sont non seulement des mécaniciens, mais aussi des ingénieurs en TIC et des techniciens en robotique. 
+©Naio Technologies 
+4. PAYS EN DÉVELOPPEMENT ET PERSPECTIVES   DE LA ROBOTIQUE AGRICOLE 
+4.1 Applications agricoles 
+Compte tenu du large éventail des caractéristiques que présentent les robots à usage agricole et malgré les défis qui se posent, l’automatisation ouvre des perspectives très intéressantes pour des nombreuses applications dans les pays en développement. À l’heure actuelle, l’automatisation des travaux agricoles suit principalement deux tendances: 
+← 
+Création de matériels entièrement nouveaux destinés à accomplir des tâches très spécifiques ou, une fois équipés des instruments nécessaires, pouvant servir de plateforme polyvalente pour l’exécution d’une série de travaux similaires à ceux qu’un tracteur permet d’effectuer. 
+← 
+Transformation de matériels agricoles classiques en machines autonomes, grâce à l’utilisation de capteurs et à des automatismes conçus pour leur permettre de fonctionner sans l’intervention physique de l’agriculteur. 
+L’approche visant à automatiser le parc existant de matériels agricoles standards est acceptée par les cultivateurs et permet d’utiliser des outils qui sont déjà disponibles au sein de l’exploitation (figure 11); divers projets de ce type sont en cours. Ainsi, un tracteur classique peut être converti en un véhicule auto-matisé capable d’effectuer les semis dans un champ de façon autonome. Cependant, en raison de la faiblesse du niveau de mécanisation et du taux d’utilisation de machines agricoles dans de nombreux pays en développement, la disponibilité de matériel pouvant être automatisé demeure limitée, si bien que l’approche de la transformation ne constitue pas nécessairement un bon point de départ. Au contraire, la création de nouveaux matériels peut être plus efficace dans les régions où les machines sont encore peu utilisées en agriculture. 
+Toutefois, dans certains pays en développement – principalement en Asie –, l’industrie nationale des machines et moteurs de dimensions réduites, y compris les services de réparation et d’entretien annexes, 
+©Hands Free Hectare, Harper 
+Figure 11. Projet Hands Free Hectare: une moissonneuse des années 1980 et un petit tracteur classique à quatre roues équipé d’une remorque 
+Note: Les deux machines procèdent côte à côte et de manière autonome à la récolte du blé d’hiver. Source: Harper Adams University (2020). 
+s’est développée au cours des dernières décennies et peut servir de base à l’établissement d’une industrie locale de matériels autonomes (Justice et Biggs, 2020). 
+À ce jour, la plupart des robots agricoles sont utilisés pour la lutte contre les plantes adventices et la surveillance des cultures. En effet, la puissance et le poids des batteries électriques sont limités, ce qui rend compliquée l’utilisation de robots pour les travaux de labour ou de préparation du sol. Néanmoins, si l’industrie parvenait à mettre au point des robots capables d’effectuer des semis sur des sols non labourés, des avantages en découleraient en termes de préservation des sols, grâce au semis direct et au maintien de la couverture des sols. 
+Le désherbage peut être mécanique (robot doté d’un bras qui arrache physiquement la mauvaise herbe) ou chimique (application d’une faible dose d’herbicide directement sur la plante adventice); d’autres possibilités, en particulier les rayons infrarouges et le laser, sont aussi à l’étude. La technologie permet de réduire considérablement les besoins en herbicides et pesticides, de même que les risques qu’une mauvaise utilisation de ces produits peut présenter pour l’environnement et pour la santé. 
+L’utilisation de robots agricoles pour la culture sans travail du sol et le semis direct, en association avec un désherbage (chimique et mécanique) localisé, constituerait un grand pas en avant; même pour les petits cultivateurs, cela signifierait qu’un robot autonome pourrait appliquer un système agronomique mécanisé conforme avec les principes généraux de l’intensification durable de l’approche «Produire plus avec moins»2, tout en étant fondé sur les principes de l’agriculture de conservation3. D’après Sims et coll. (2018), des machines robotiques commerciales utilisant un GPS cinématique en temps réel seront bientôt 
+disponibles pour un désherbage ciblé associant l’application d’un herbicide et un rayon laser; une autre possibilité pour les cultures sans labour sont des systèmes de désherbage mécanique sans retournement du sol. Les robots désherbants sont légers et bon marché et peuvent permettre d’éviter le compactage du sol dérivant du passage de lourdes plateformes de pulvérisation durant les opérations de désherbage. 
+2 L’approche Produire plus avec moins, promue par la FAO, est un modèle de production intensive des cultures à la fois hautement productif et respectueux de l’environnement. Pour de plus amples informations, voir: https://www.fao.org/ag/save-and-grow/fr/ 
+3 L’agriculture de conservation est un système de production agricole qui encourage la couverture permanente des sols, leur perturbation minimale (c’est-à-dire sans labour) et la diversification des espèces cultivées. Elle améliore la biodiversité et stimule les processus biologiques naturels qui ont lieu au-dessus et en dessous de la surface du sol, ce qui contribue à une utilisation plus efficace de l’eau et des nutriments tout en améliorant durablement la production végétale. Pour de plus amples informations, voir: http://www.fao.org/conservation-agriculture/fr/. 
+4.2 Possibilités d’entrepreneuriat agricole 
+Les petits robots proposés à la vente ou à la location à un prix abordable peuvent offrir une solution dans les zones où la main-d’oeuvre est insuffisante et où les machines classiques ne sont pas disponibles ou sont trop coûteuses pour les petits exploitants. Les agriculteurs possèdent généralement la plupart de leur matériel, mais dans le cas de la robotique, un système de location ou de prestation de services peut présenter des avantages pour les cultivateurs comme pour les fournisseurs (Lowenberg-DeBoer et coll., 2019). L’une des tâches les plus pénibles pour les petits exploitants est le désherbage manuel; dans les campagnes, les jeunes et les adolescents aptes refusent de se plier à ces corvées, perdent tout intérêt pour les travaux agricoles manuels et quittent leurs villages en quête d’autres sources de revenus dans les centres urbains plus importants, voire au-delà. Par conséquent, l’introduction et l’adoption de petits robots capables d’effectuer ce type de travail de manière plus efficace, plus rapidement et à un prix abordable, peuvent offrir un modèle d’activité très intéressant pour de jeunes entrepreneurs dans les campagnes. La robotique pourrait susciter l’intérêt des jeunes ruraux pour les technologies agricoles innovantes et favoriser l’apparition de nouveaux types d’emplois grâce à la mécanisation rurale et à l’automatisation partielle de la production. Pour les agriculteurs, les avantages potentiels sont multiples: une plus grande efficacité, des tâches moins pénibles et des améliorations prévisibles de la production, permettant d’obtenir des rendements accrus ou plus constants. Le temps ainsi gagné pourrait être consacré à d’autres tâches agricoles ou à des activités telles que l’élevage de volaille, la création de jardins potagers ou d’autres sources de revenus possibles liées à la chaîne de valeur. Lorsque les infrastructures des technologies de l'information en place sont stables, les robots à usage agricole peuvent accomplir les tâches requises sans la présence physique de quiconque et l’agriculteur a ainsi la possibilité de se consacrer à d’autres activités. 
+Les services après-vente et les infrastructures des technologies de l'information sont des exigences susceptibles de constituer deux obstacles majeurs à l’introduction et à l’adoption de robots agricoles dans les pays en développement. Il convient donc d’effectuer une analyse afin de comprendre quels sont les types de robots adaptés au contexte. La technologie est très évolutive et peut être considérablement simplifiée, rendant ainsi les machines faciles à manoeuvrer et à entretenir. Par exemple, un robot conçu pour pulvériser des herbicides dans les cultures en ligne peut être complexe et doté de multiples capteurs permettant de localiser les plantes adventices et de les pulvériser une à une, ou bien il peut être simplifié et se limiter à reconnaître les rangs cultivés pour pulvériser le produit sur les côtés (dans ce cas, les exigences en matière d’entretien sont bien plus simples). 
+Les robots agricoles peuvent être conçus de façon à ce que les pièces de rechange puissent être obtenues par impression 3D, ce qui permet de décentraliser la production et de simplifier la logistique correspondante. Cela offre également des possibilités de création de nouvelles entreprises dans le domaine de l’impression 3D et de la conception de robots dans les pays de destination, au lieu de devoir faire appel aux technologies innovantes provenant de pays étrangers. L’introduction de nouvelles technologies de robotique agricole peut servir de point d’ancrage pour les jeunes dans les zones rurales, en rendant les activités agricoles plus attrayantes à leurs yeux et en offrant aux entrepreneurs et aux innovateurs de nouvelles possibilités d’assistance aux petites industries et entreprises. 
+Un facteur clé pour favoriser l’adoption de robots à usage agricole dans les pays en développement consiste à concevoir et proposer des solutions techniques à faible coût (abordables), mais ayant néanmoins un impact élevé en termes de rendement des cultures, de réduction du coût de la main-d’oeuvre, de rapidité d’exécution des tâches agricoles ou d’atténuation de la pénibilité, par exemple. De simples robots de désherbage ouvrent des perspectives très intéressantes dans les pays en développement, tout comme les technologies qui permettent d’améliorer l’efficience de l’utilisation des intrants, par exemple les robots qui distribuent les engrais selon le taux d’application voulu ou ceux qui sèment à la volée. 
+4.3 Atténuation de la pénibilité du travail des petits exploitants agricoles 
+Les multiples applications et utilisations possibles de robots agricoles peuvent apporter une contribution importante aux moyens d’existence en milieu rural, surtout avec le développement de l’Internet des objets. Par exemple, de simples plateformes roulantes suivant une personne équipée d’un téléphonepor-table pourraient faciliter le transport de marchandises, d’eau potable ou d’outils lourds, permettant ainsi de réduire considérablement la pénibilité des tâches et d’accroître la productivité de ceux qui comptent sur leur propre force musculaire. La mise au point de cette technologie pourrait avoir un impact considérable dans la mesure où, dans les pays en développement, le transport de l’eau potable fait souvent partie des tâches quotidiennes des femmes (et que cette corvée peut prendre 2 à 3 heures par jour), et sachant que beaucoup de temps est aussi consacré au transport de marchandises vers les marchés locaux et en provenance de ceux-ci. Les robots automatisés pourraient également rendre inutile le désherbage mécanique, une autre des tâches manuelles qui incombent généralement aux femmes dans les petites exploitations agricoles. 
+Compte tenu du coût d’achat et des compétences requises pour utiliser et entretenir ce type d’équipement, la façon la plus rentable pour les agriculteurs de tirer parti de ces avantages peut être de recourir à des services de location, moyennant lesquels un opérateur spécialisé, propriétaire de la machine ou employé par le propriétaire du matériel, effectue lui-même la tâche requise (le désherbage, par exemple) contre rémunération. Les agriculteurs peuvent ainsi profiter des robots sans avoir nécessairement à demander des prêts importants ni à engager des dépenses considérables pour obtenir du matériel dont l’usage requiert des compétences spécialisées. Dans les zones rurales, le modèle de services de location offre aussi des perspectives aux entrepreneurs qui ont les connaissances et/ou le capital requis et qui sont prêts à investir dans le matériel. 
+4.4 Contribution à la réalisation des objectifs de développement durable 
+La robotique agricole a un rôle à jouer en faveur du développement durable. En effet, la technologie 
+peut contribuer à la réalisation de plusieurs des objectifs de développement durable (ODD) des Nations Unies (figure 12): 
+← 
+Amélioration des moyens d’existence.  L’atténuation de la pénibilité du travail améliore directement les conditions de vie des agriculteurs, en particulier celles des petits exploitants agricoles. L’amélioration du rendement des cultures (par rapport à celui que les pratiques traditionnelles permettent d’obtenir) conduit à une augmentation des revenus et de l’apport alimentaire. 
+← 
+Souveraineté alimentaire et nutrition adéquate. L’accroissement de la production végétale et la diversification des plantes cultivées grâce à l’optimisation du système de culture peuvent contribuer à réduire la dépendance à l’égard de denrées alimentaires provenant de zones de production éloignées. Par ailleurs, la diversification de la consommation peut permettre d’améliorer l’apport alimentaire et la nutrition générale des agriculteurs. 
+← 
+Impact sur l’exode rural. La mise en place de nouveaux types d’entreprises rurales axées sur la production agricole, l’assistance technique ainsi que l’utilisation et l’entretien de robots agricoles offre l’occasion de stimuler les jeunes qualifiés et de les encourager à ne pas quitter les zones rurales. 
+← 
+Création d’emplois et d’entreprises. La nécessité de disposer d’une main-d’oeuvre qualifiée et dûment formée pour utiliser et entretenir la technologie et ses diverses composantes (mécanique, télécommunications, gestion des données) ouvre de nouveaux débouchés pour les jeunes qualifiés et pour les entrepreneurs ruraux prêts à créer des entreprises visant à améliorer l’efficacité de la pro-
+duction agricole et les prestations de services dans le domaine de la mécanisation agricole, y compris l’assistance technique nécessaire à l’utilisation et à l’entretien du matériel. De nouveaux types de modèles d’activité pourront ainsi voir le jour. 
+← 
+Réduction de la fracture technologique. L’insertion de différents types de technologies, telles que l’apprentissage automatique, le positionnement par satellite ou les automatismes, contribue à combler le fossé entre les pays développés et les pays en développement. La robotique est adaptable par essence, ce qui facilite l’adoption de la technologie dans des contextes différents. Il est donc possible de sauter les étapes de l’évolution technologique des opérations agricoles mécanisées, en passant directement d’une agriculture de subsistance fondée sur le travail manuel ou la traction animale, à une agriculture commerciale axée sur l’agriculture de précision. 
+← 
+Intensification de la production durable. L’adoption des modalités de l’agriculture de précision pour optimiser l’utilisation des ressources et accélérer les opérations de récolte grâce au semis direct, au désherbage mécanique ciblé ou à la pulvérisation en ultra-bas volume, par exemple, permet aux agriculteurs de produire plus avec moins. 
+← 
+Gestion durable des ressources. Réduire l’utilisation d’intrants, limiter les perturbations causées au sol et accroître la production sans porter préjudice aux ressources naturelles existantes sont autant de moyens qui permettent d’améliorer durablement les revenus des exploitants agricoles et de la population rurale. 
+PAS DE PAUVRETĒ TRAVAIL DĒCENT ET CROISSANCE ÉCONOMIQUE FAIM «ZĒRO» INDUSTRIE, INNOVATION ET INFRASTRUCTURE CONSOMMATION, ET PRODUCTION RESPONSABLE VIE TERRESTRE 
+Figure 12. Objectifs de développement durable à la réalisation desquels la robotique agricole peut contribuer 
+5. CONCLUSION 
+Les robots agricoles n’en sont encore qu’à leurs premières phases de développement, mais leurs potentialités apparaissent déjà clairement. Les défis à venir sont d’ordre non seulement technique, mais aussi socioéconomique, et tiennent en particulier au renforcement des capacités et à la nécessité de bien comprendre les principes et les technologies en jeu. Cependant, du fait de leur versatilité, les robots agricoles seront capables d’accomplir des tâches dans des conditions requérant, en soi, une forte intensité de main-d’oeuvre, et pourront ainsi contribuer concrètement à promouvoir une production agricole durable et à améliorer les moyens d’existence des petits exploitants agricoles dans les pays en développement. Les robots à usage agricole offrent 
+l’occasion d’améliorer l’efficacité de la production agricole, de contribuer au développement durable de l’agriculture et d’introduire l’innovation et les technologies de pointe dans de nouveaux domaines. La FAO a un rôle important à jouer dans ce processus, en préconisant le développement inclusif de cette technologie et en veillant à ce que les nouvelles technologies agricoles que représentent les outils automatisés et les robots contribuent à renforcer et à promouvoir les principes de l’intensification durable de l’agriculture. La FAO se propose d’aider à ce que la technologie devienne accessible aux petits exploitants agricoles, en faisant en sorte que des politiques et des cadres d’action adaptés soient élaborés et mis en application à cette fin. 
+ 
+19 ©Depositphotos 
+©Naio Technologies 
+BIBLIOGRAPHIE 
+Agerris. 2020. Agerris [online]. Chippendale, Australia. [Cited 10 September 2020]. https://agerris.com/ 
+Agrobot. 2020. Agrobot [online]. Huelva, Spain. [Cited 4 August 2020]. https://www.agrobot.com/ 
+Agrointelli. 2018. Agrointelli [online]. Aarhus, Denmark. [Cited 4 August 2020]. http://agrointelli.com 
+Aubert, B.A., Schroeder, A. & Grimaudo, J. 2012. IT as enabler of sustainable farming: An empirical analysis of farmers’ adoption decision of precision agriculture technology. Decision Support Systems, 54(1): 510–520. 
+Barnes, A.P., Soto, I., Eory, V., Beck, B., Balafoutis, A., Sanchez, B., Vangeyte, J., Fountas, S., van der Wal, T. & Gomez-Barbero, M. 2019. Exploring the adoption of precision agricultural technologies: a cross regional study of EU farmers. Land Use Policy, 80: 163–174. 
+Bechar, A. & Vigneault, C. 2016. Agricultural robots for field operations: Concepts and components. Biosystems Engineering, 149: 94–111. 
+Bechar, A. & Vigneault, C. 2017. Agricultural robots for field operations. Part 2: Operations and systems. Biosystems Engineering, 153: 110–128. 
+Crosby, M., Nachiappan, Pattanayak, P., Verma, S. & Kalyanaraman, V. 2015. BlockChain technology. Beyond Bitcoin. Sutardja Center for Entreneurship & Technology. University of California. (also available at https://scet. berkeley.edu/wp-content/uploads/BlockchainPaper.pdf). 
+Emmi, L., Gonzalez-de-Soto, M., Pajares, G. & Gonzalez-de-Santos, P. 2014. New trends in robotics for agriculture: Integration and assessment of a real fleet of robots. The Scientific World Journal, Volume 2014: ID 404059 [online]. [Cited 21 July 2020]. https://doi.org/10.1155/2014/404059 
+Encyclopedia Britannica. 2020. Encyclopedia Britannica [online]. [Cited 4 August 2020] https://www.britannica.com/ 
+FAO. 2015. Decent work indicators for agricultural and rural areas: Conceptual issues, data collection challenges and possible areas for improvement. FAO Statistics Division. Working Paper Series ESS 15-10. Rome. 80 pp. (also available at http://www.fao.org/3/a-i5060e.pdf). 
+FAO. 2018. Hire services as a business enterprise: A training manual for small-scale mechanization service providers. Rome. (also available at http://www.fao.org/3/I9207EN/i9207en.pdf). 
+FAO. 2019a. Counting crops + Drops: using remote sensing to help grow the future together [video]. [Cited 4 August 2020]. https://www.youtube.com/watch?v=ZX7SOhk97hA 
+FAO. 2019b. Smallholders and family farming. In: Family Farming Knowledge Platform [online]. Rome. [Cited 21 July 2020]. http://www.fao.org/family-farming/themes/ small-family-farmers/en/ 
+FIRA. 2018. FIRA – International Forum of Agricultural Robotics [video]. [Cited 4 August 2020]. https://www.youtube.com/watch?v=23Vvglgijug 
+Grow Asia Partnership. 2019. Driving agritech adoption: Insights from Southeast Asia’s farmers (also available at http://exchange.growasia.org/system/files/Driving%20 AgriTech%20Adoption%20-%20Insights%20from%20 Southeast%20Asia%27s%20Farmers.pdf). 
+GSMA. Mobile coverage maps [online]. [Cited 4 August 2020]. https://www.mobilecoveragemaps.com/#minimaps. 
+Hands Free Hectare. 2020. Hands Free Hectare [online]. [Cited 8 September 2020]. https://www.handsfreehectare. com/uploads/1/1/4/0/11403595/hfh2-harvest-9_1_orig.jpg 
+Justice, S. & Biggs, S. 2020. The spread of smaller engines and markets in machinery services in rural areas of South Asia. Journal of Rural Studies, 73: 10–20. 
+Kiritsis, D. 2011. Closed-loop PLM for intelligent products in the era of the Internet of things. Computer-Aided Design, 43: 479–501 [online]. [Cited 21 July 2020]. doi:10.1016/j.cad.2010.03.002 
+Lowder, S.K., Skoet, J. & Raney, T. 2016. The number, size, and distribution of farms, smallholder farms, and family farms worldwide. World Development, 87: 16–29. 
+Lowenberg-DeBoer, J., Huang, I.Y., Grigoriadis, V. & Blackmore, S. 2019. Economics of robots and automation in field crop production. Precision Agriculture, 21: 278–299. 
+Murray, U., Gebremedhin, Z., Brychkova, G. & Spillane, C. 2016. Smallholder farmers and climate smart agriculture: Technology and labor-productivity constraints amongst women smallholders in Malawi. Gender, Technology and Development, 20(2): 117–148. 
+National Oceanic and Atmosferic Administration (NOAA). 2020. What is remote sensing? In National Ocean Service [online]. [Cited 21 July 2020]. https://oceanservice. noaa.gov/facts/remotesensing.html 
+Naio Technologies. 2016. Naio Technologies [online]. Escalquens, France. [Cited 4 August 2020]. https://www. naio-technologies.com/wp-content/uploads/2016/02/ naoi-oz-lafranceagricole.fr_.jpg 
+Pierpaoli, E., Carli, G., Pignatti, E. & Canavari, M. 2013. Drivers of precision agriculture technologies adoption: A literature review. Procedia Technology, 8: 61–69. 
+PlantVillage. 2013. PlantVillage [online]. State College, PA, USA. [Cited 4 August 2020]. https://plantvillage.psu.edu/ 
+Sáiz-Rubio, V. & Rovira-Más, F. 2020. From smart farming towards agriculture 5.0: A review on crop data management. Agronomy, 10(2): 207 [online]. [Cited 21 July 2020]. https://doi.org/10.3390/agronomy10020207 
+Sims, B., Corsi, S., Gbehounou, G., Kienzle, J., Taguchi, M. & Friedrich, T. 2018. Sustainable weed management for conservation agriculture: Options for smallholder farmers. Agriculture, 8(8): 118 [online]. [Cited 21 July 2020]. https://doi.org/10.3390/agriculture8080118 
+Vasconez, J.P., Kantor, G.A. & Auat Cheein, F.A. 2019. Human–robot interaction in agriculture: A survey and current challenges. Biosystems Engineering, 179: 35–48. 
+Voutier, P. 2019. Driving AgriTech adoption: Insights from Southeast Asia´s farmers. IFAD and GrowAsia. (also available at http://exchange.growasia.org/system/files/ Driving%20AgriTech%20Adoption%20-%20Insights%20 from%20Southeast%20Asia%27s%20Farmers.pdf). 
+
+22©Agerris 
+ANNEXE 
+Typologies et exemples de robots agricoles 
+La liste ci-après n’est pas exhaustive et ne sera sans doute plus d’actualité dans quelques années compte tenu de l’évolution rapide de la technologie. Elle vise à mettre en avant les différents types de produits qui sont actuellement disponibles dans le domaine de la robotique agricole, afin que les lecteurs puissent se familiariser avec ceux-ci. Le fait qu’un fabricant soit mentionné dans la liste ne signifie pas que l’Organisation des Nations Unies pour l’alimentation et l’agriculture approuve ou recommande les produits de celui-ci. 
+TABLEAU A1.1 
+Robots spécialisés destinés à accomplir une fonction ou tâche spécifique 
+Produit 
+Fonction 
+Tâches effectuées et autres informations 
+Site web 
+Cerescon 
+Robot de récolte d’asperges 
+Conçu pour la récolte des asperges, il permet de pallier la pénurie de main-d’oeuvre spécialisée requise pour la cueillette manuelle 
+https://www.cerescon.com/EN/home 
+Deserbiocut 
+Robot de désherbage 
+Prototype de robot de désherbage mécanique alimenté par énergie solaire, il désherbe tout en préservant la couverture du sol 
+https://deserbiocut.com/ 
+Jackal 
+Plateforme de recherche 
+Elle est équipée de divers types de capteurs, pour la recherche et la surveillance 
+https://www.clearpathrobotics.com/jackal-small-unmanned-ground-vehicle/ 
+HV-100 
+Robot pour la 
+protection des cultures 
+Il sert au transport de matières végétales et de plantes en pots 
+https://www.public.harvestai.com/ 
+Swarm Farm 
+Robot de protection des cultures 
+Il sert à pulvériser des produits destinés à la protection des cultures et peut travailler en essaim 
+https://www.swarmfarm.com/ 
+Ecorobotix 
+Robot de désherbage 
+Prototype de robot de désherbage mécanique alimenté par énergie solaire, il désherbe tout en préservant la couverture du sol 
+https://www.ecorobotix.com/en/autonomous-robot-weeder/ 
+Dino 
+Robot de désherbage 
+Il sert à désherber les cultures légumières 
+https://www.naio-technologies.com/en/agricultural-equipment/large-scale-vegetable-weeding-robot/ 
+Ted 
+Robot de désherbage 
+Il sert à désherber les cultures légumières 
+https://www.naio-technologies.com/en/agricultural-equipment/vineyard-weeding-robot/ 
+Oz 
+Robot de désherbage 
+Il sert à désherber les cultures sous abri 
+https://www.naio-technologies.com/en/agricultural-equipment/weeding-robot-oz/ 
+Harvest Croo 
+Robot récolteur de fraises 
+Inspecter et cueillir les fraises mûres, couvrir la pénurie de main-d'œuvre spécialisée pour la récolte manuelle 
+https://harvestcroo.com/ 
+Vitirover 
+Robot tondeur 
+Il sert à tondre la végétation de couverture permanente dans les cultures pérennes 
+https://www.vitirover.fr/en-robot 
+Agrobot 
+Robot récolteur de fraises autonome 
+Il sert à cueillir les fraises dans les cultures en ligne 
+https://www.agrobot.com 
+Guss 
+Robot pulvérisateur autonome 
+Il se déplace dans les vergers sans conducteur, grâce à une technologie sophistiquée associant un GPS, un lidar, des capteurs embarqués et un logiciel propriétaire 
+https://gussag.com 
+Vinerobot 
+Robot de surveillance des vignobles autonome 
+Il explore les vignobles et surveille les paramètres du sol et des plantes pour donner des indications concernant l’irrigation, les traitements et l’état des cultures 
+https://www.youtube.com/watch?v=O13z1OvwM3Y 
+Note: GPS – système de positionnement mondial. 
+TABLEAU A1.2 
+Plateformes polyvalentes – servant à effectuer deux ou plusieurs tâches simultanément ou de façon interchangeable 
+Produit 
+Fonction 
+Tâches effectuées et autres informations 
+Site web 
+Digital Farmhand Robot/Agerris 
+Plateforme polyvalente 
+Conçue pour l’agriculture à petite échelle, elle fonctionne en association avec des outils classiques 
+www.agerris.com/ 
+DOT 
+Plateforme polyvalente 
+Elle fonctionne en association avec des outils classiques 
+www.seedtorun.com 
+Farmdroid 
+Plateforme de semis et de désherbage 
+Elle est alimentée par énergie solaire 
+http://farmdroid.dk/ 
+Husky 
+Plateforme de développement 
+Plateforme autonome utilisée pour le transport de charges, équipée de capteurs ou servant à d’autres types d’activités 
+https://www.clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/ 
+Robotti 
+Plateforme porteuse d’outils 
+Plateforme équipée de moteurs diesel et permettant d’utiliser des outils pour la préparation du sol, les semis et le désherbage 
+http://agrointelli.com/robotti-diesel.html#rob.diesel 
+CEOL 
+Plateforme porteuse d’outils 
+Plateforme autonome permettant d’utiliser des outils classiques pour la préparation du sol, les semis, le désherbage et la pulvérisation 
+https://www.agreenculture.fr/ 
+TABLEAU A1.3 
+Matériel agricole automatisé – matériel classique pouvant fonctionner sans conducteur grâce à l’installation de dispositifs de communication et de commande 
+Produit 
+Fonction 
+Tâches effectuées et autres informations 
+Site web 
+Hands Free Hectare 
+Automatisation de matériel existant 
+Le projet de la Harper Adams University a permis d’exploiter 1 ha de cultures céréalières sur une période de trois ans, sans aucune intervention humaine directe au sol, à l’aide du matériel agricole automatisé existant. Il est actuellement en phase d’expansion et d’essai auprès d’agriculteurs de la région. 
+http://www.handsfreehectare.com/ 
+Bear Flag 
+Technologie de pilotage à distance pour tracteurs et autres matériels 
+L’entreprise a mis au point une technologie permettant de rendre les tracteurs et autres matériels classiques, autonomes et autotractés. 
+http://bearflagrobotics.com/ 
+University of Hokkaido 
+Automatisation de matériel existant 
+L’Institut de recherche agronomique, en collaboration avec les fabricants de machines agricoles japonais, a développé une technologie permettant aux tracteurs et matériels existants de fonctionner en essaim et 
+d’effectuer les travaux agricoles de façon autonome. 
+https://youtu.be/pvzez_CWztQ 
+CB2186FR/1/12.21 

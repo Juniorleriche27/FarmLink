@@ -1,0 +1,24 @@
+# === Backend API ===
+fastapi
+uvicorn
+
+# === Frontend ===
+streamlit
+
+# === RAG & Embeddings ===sentence-transformers
+# tf-keras for Transformers TF dependency compatibility
+tf-keras
+qdrant-client
+
+# === Fichiers & Parsing ===
+pypdf
+python-docx
+beautifulsoup4
+
+# === Gestion des variables d'environnement ===
+python-dotenv
+
+# === Optionnel (utile mais recommandé) ===
+requests         # appels API
+httpx            # alternative pour async
+
