@@ -1,26 +1,27 @@
 import os
 from typing import Dict, List
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-# Import de ton moteur RAG et LLM
+# RAG & LLM
 from retrievers.multi_qdrant_retriever import MultiQdrantRetriever
 from llm.generator import generate_answer
 
 app = FastAPI(title="FarmLink API")
 
-# Autoriser ton front Streamlit
+# ----------- CORS (configurable via ENV) -----------
+FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "*")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # tu pourras remplacer * par ton URL Streamlit plus tard
+    allow_origins=[FRONTEND_ORIGIN] if FRONTEND_ORIGIN != "*" else ["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# ----------- Configuration Qdrant -----------
-
+# ----------- Qdrant: collections & endpoints -----------
 _COLLECTION_SUFFIXES = {
     "farmlink_sols": "SOL",
     "farmlink_marche": "MARCHE",
@@ -61,15 +62,30 @@ def _filter_endpoints(raw: Dict[str, Dict[str, str]]) -> Dict[str, Dict[str, str
 ENDPOINTS = _filter_endpoints(_raw_endpoints())
 retriever = MultiQdrantRetriever(ENDPOINTS)
 
-# ----------- Modèle de requête -----------
-
+# ----------- Modèle d'entrée -----------
 class QueryIn(BaseModel):
     question: str
     domain: str = "all"
     top_k: int = 4
     temperature: float = 0.2
 
+# ----------- Constantes -----------
+GREETINGS = {
+    "salut", "bonjour", "bonsoir", "hello", "hi", "coucou",
+    "bjr", "bon matin", "bonsoir farm", "hey"
+}
+
 # ----------- Endpoints -----------
+@app.get("/", include_in_schema=False)
+def root():
+    return {
+        "name": "FarmLink API",
+        "status": "ok",
+        "health": "/health",
+        "docs": "/docs",
+        "domains": "/domains",
+        "query": {"path": "/query", "method": "POST"},
+    }
 
 @app.get("/health")
 def health():
@@ -88,29 +104,23 @@ def query(q: QueryIn):
     if q.domain != "all" and q.domain not in available:
         raise HTTPException(status_code=400, detail=f"Unknown domain '{q.domain}'")
 
-    greetings = {
-        'salut', 'bonjour', 'bonsoir', 'hello', 'hi', 'coucou',
-        'bjr', 'bon matin', 'bonsoir farm', 'hey'
-    }
-
     question_clean = q.question.strip().lower()
-    if question_clean in greetings or question_clean.rstrip('!?.') in greetings:
+    if question_clean in GREETINGS or question_clean.rstrip("!?.") in GREETINGS:
         return {
             "answer": (
                 "Bonjour ! Je suis FarmLink, ton copilote agricole. "
                 "N'hésite pas à me poser une question sur les sols, les cultures, "
                 "l'irrigation, la mécanisation ou les politiques agricoles."
             ),
-            "contexts": []
+            "contexts": [],
         }
 
     contexts = retriever.search(q.question, top_k=q.top_k, domain=q.domain)
-
     prompt = build_prompt(q.question, contexts)
     answer = generate_answer(prompt, temperature=q.temperature)
     return {"answer": answer, "contexts": contexts}
 
-
+# ----------- Prompt builder -----------
 def build_prompt(question: str, contexts: List[Dict]) -> str:
     if not contexts:
         return (
@@ -127,5 +137,6 @@ def build_prompt(question: str, contexts: List[Dict]) -> str:
         f"Question: {question}\n\n"
         "CONTEXTE:\n"
         f"{ctx_block}\n\n"
-        "Réponse détaillée, claire et structurée avec une courte synthèse finale et les sources citées en fin de message."
+        "Réponse détaillée, claire et structurée avec une courte synthèse finale "
+        "et les sources citées en fin de message."
     )
