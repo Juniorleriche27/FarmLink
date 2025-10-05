@@ -33,6 +33,22 @@ GREETINGS = {
     'bjr', 'bon matin', 'bonsoir farm', 'hey'
 }
 
+# Détection question “Tu es spécialisé en quoi ?”
+SPECIALTY_PATTERNS = [
+    "spécialisé", "specialise", "specialisé", "domaines", "compétences",
+    "tu fais quoi", "tu aides sur quoi", "c'est quoi ton domaine",
+    "tes domaines", "dans quoi es-tu spécialisé", "specialite", "spécialité",
+]
+
+DOMAIN_LABELS = {
+    "all": "Tous domaines",
+    "farmlink_sols": "Sols & fertilisation",
+    "farmlink_cultures": "Cultures vivrières",
+    "farmlink_eau": "Irrigation & eau",
+    "farmlink_meca": "Mécanisation & innovation",
+    "farmlink_marche": "Politiques & marchés",
+}
+
 _COLLECTION_SUFFIXES = {
     "farmlink_sols": "SOL",
     "farmlink_marche": "MARCHE",
@@ -41,22 +57,19 @@ _COLLECTION_SUFFIXES = {
     "farmlink_meca": "MECA",
 }
 
+# Limite d’affichage des sources dans la réponse
+MAX_SOURCES = 3
+
 _WORD_RE = re.compile(r"[a-z0-9]{3,}")
-
-
 
 def _normalize_text(value: str) -> str:
     """Return a lowercase ASCII-only version of the input."""
     normalized = normalize("NFKD", (value or ""))
     return normalized.encode("ascii", "ignore").decode("ascii").lower()
 
-
-
 def _tokenize(value: str) -> List[str]:
     """Tokenize text for simple keyword coverage checks."""
     return _WORD_RE.findall(_normalize_text(value))
-
-
 
 def _missing_keywords(question: str, contexts: List[Dict], cutoff: float = 0.82) -> List[str]:
     """Identify question keywords that are absent from retrieved contexts."""
@@ -81,8 +94,6 @@ def _missing_keywords(question: str, contexts: List[Dict], cutoff: float = 0.82)
             continue
         missing.append(token)
     return missing
-
-
 
 def _raw_endpoints() -> Dict[str, Dict[str, str]]:
     base_url = (os.getenv("QDRANT_URL") or "").strip()
@@ -143,6 +154,14 @@ class QueryIn(BaseModel):
     top_k: int = 4
     temperature: float = 0.2
 
+# ===== Utils =====
+def _short_sources(contexts: List[Dict], limit: int = MAX_SOURCES) -> List[str]:
+    out = []
+    for c in contexts[:limit]:
+        title = c.get("title") or "Document"
+        out.append(str(title))
+    return out
+
 # ===== Endpoints =====
 @app.get("/", include_in_schema=False)
 def root():
@@ -183,6 +202,8 @@ def query(q: QueryIn):
         raise HTTPException(status_code=400, detail=f"Unknown domain '{q.domain}'")
 
     question_clean = q.question.strip().lower()
+
+    # 1) Salutations ?
     if question_clean in GREETINGS or question_clean.rstrip('!?.') in GREETINGS:
         return {
             "answer": (
@@ -193,49 +214,103 @@ def query(q: QueryIn):
             "contexts": []
         }
 
+    # 2) “Tu es spécialisé en quoi ?” → réponse meta, sans RAG
+    if any(p in question_clean for p in SPECIALTY_PATTERNS):
+        if q.domain != "all":
+            actif = DOMAIN_LABELS.get(q.domain, q.domain)
+            answer = (
+                f"Je suis FarmLink, assistant RAG agricole.\n"
+                f"Actuellement, je suis **réglé sur** : **{actif}**.\n"
+                "Je réponds uniquement aux questions liées à ce domaine."
+            )
+        else:
+            answer = (
+                "Je suis FarmLink, assistant RAG agricole. Domaines couverts :\n"
+                "• Sols & fertilisation\n• Cultures vivrières\n• Irrigation & eau\n"
+                "• Mécanisation & innovation\n• Politiques & marchés\n\n"
+                "Choisis un domaine ou pose ta question."
+            )
+        return {"answer": answer, "contexts": []}
+
+    # 3) RAG normal
     contexts = retriever.search(q.question, top_k=q.top_k, domain=q.domain)
+
+    # Heuristique: si aucun mot de la question ne se retrouve dans le contexte → vide
     missing_keywords = _missing_keywords(q.question, contexts)
     question_tokens = _tokenize(q.question)
     contexts_for_prompt = contexts
     if contexts and question_tokens and len(missing_keywords) == len(question_tokens):
         contexts_for_prompt = []
         contexts = []
-    prompt = build_prompt(q.question, contexts_for_prompt, missing_keywords)
+
+    domain_label = DOMAIN_LABELS.get(q.domain) if q.domain != "all" else None
+    prompt = build_prompt(
+        q.question,
+        contexts_for_prompt,
+        missing_keywords=missing_keywords,
+        domain_label=domain_label,
+    )
     answer = generate_answer(prompt, temperature=q.temperature)
+
+    # 4) Si le modèle “oublie” la section sources, on ajoute (max 3 titres)
+    import re as _re
+    if not _re.search(r"(?i)\bsources?\s*:", answer):
+        titles = _short_sources(contexts_for_prompt, MAX_SOURCES)
+        if titles:
+            answer = f"{answer.rstrip()}\n\nSources (contexte FarmLink):\n" + \
+                     "\n".join(f"- {t}" for t in titles)
+
     return {"answer": answer, "contexts": contexts}
 
-def build_prompt(question: str, contexts: List[Dict], missing_keywords: Optional[List[str]] = None) -> str:
-    """Build the final prompt for the LLM, optionally flagging missing keywords."""
+def build_prompt(
+    question: str,
+    contexts: List[Dict],
+    missing_keywords: Optional[List[str]] = None,
+    domain_label: Optional[str] = None,
+) -> str:
+    """Prompt strict : contexte uniquement, max 3 sources, refus hors périmètre si besoin."""
     missing = sorted(set(missing_keywords or []))
     if missing:
         keywords = ", ".join(missing)
         guidance = (
-            "IMPORTANT : le CONTEXTE fourni ne couvre pas les mots clés suivants issus de la question : "
-            f"{keywords}. Si tu n'as pas assez d'informations provenant du corpus, "
-            "dis-le explicitement, invite à reformuler ou suggère de cibler un autre domaine.\n\n"
+            "IMPORTANT : le CONTEXTE fourni ne couvre pas certains mots clés de la question : "
+            f"{keywords}. Si l'information manque dans le CONTEXTE, dis-le explicitement, "
+            "invite à reformuler ou propose de cibler un autre domaine.\n\n"
         )
     else:
         guidance = ""
 
+    domaine_txt = f"dans le domaine **{domain_label}**" if domain_label else "en agriculture"
+    guardrails = (
+        "RÈGLES:\n"
+        "1) Utilise UNIQUEMENT le CONTEXTE fourni. Si une info manque, dis-le explicitement.\n"
+        "2) N'invente aucun mélange (pas de 40%/60%), ne mentionne aucune source externe.\n"
+        "3) Si la question est hors du domaine actif, refuse poliment et propose des exemples pertinents.\n"
+        "4) Structure: Résumé express → Analyse structurée → Recommandations (si utiles) → Ouverture (facultatif).\n"
+        "5) Termine par 'Sources' listant au plus 3 titres EXACTS du CONTEXTE (pas d'URL, pas d'année si absente).\n"
+    )
+
     if not contexts:
         return (
-            "Tu es FarmLink, assistant RAG specialise en agriculture.\n"
+            f"Tu es FarmLink, assistant RAG {domaine_txt}.\n"
             f"{guidance}"
-            "Aucune information n'est disponible. Invite l'utilisateur à reformuler."
+            + guardrails +
+            "Aucune information n'est disponible dans le CONTEXTE. "
+            "Réponds: indique que le contexte ne couvre pas la question et propose une reformulation précise."
         )
 
     ctx_block = "\n\n".join(
-        f"- {c['text']}\n(source: {c['title']} | {c['source']})" for c in contexts
+        f"- {c['text']}\n(source: {c.get('title','Document')} | {c.get('source','Corpus FarmLink')})"
+        for c in contexts
+        if c.get('text')
     )
 
     return (
-        "Tu es FarmLink, assistant RAG specialise en agriculture.\n"
+        f"Tu es FarmLink, assistant RAG {domaine_txt}.\n"
         f"{guidance}"
-        "Réponds uniquement avec les informations du CONTEXTE. "
-        "Si ce n'est pas couvert, dis-le clairement.\n"
+        + guardrails +
         f"Question: {question}\n\n"
         "CONTEXTE:\n"
         f"{ctx_block}\n\n"
-        "Réponse détaillée, claire et structurée avec une courte synthèse finale et les sources citées en fin de message."
+        "Maintenant, produis la réponse en respectant strictement les règles."
     )
-
