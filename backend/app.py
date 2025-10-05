@@ -2,7 +2,7 @@ import os
 import re
 from difflib import get_close_matches
 from unicodedata import normalize
-from typing import Any, Dict, List, Set
+from typing import Any, Dict, List, Set, Optional
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -204,7 +204,7 @@ def query(q: QueryIn):
     answer = generate_answer(prompt, temperature=q.temperature)
     return {"answer": answer, "contexts": contexts}
 
-def build_prompt(question: str, contexts: List[Dict], missing_keywords: List[str] | None = None) -> str:
+def build_prompt(question: str, contexts: List[Dict], missing_keywords: Optional[List[str]] = None) -> str:
     """Build the final prompt for the LLM, optionally flagging missing keywords."""
     missing = sorted(set(missing_keywords or []))
     if missing:
