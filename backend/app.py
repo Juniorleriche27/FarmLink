@@ -49,6 +49,30 @@ DOMAIN_LABELS = {
     "farmlink_marche": "Politiques & marchés",
 }
 
+_DOMAIN_KEYWORDS = {
+    "farmlink_sols": {
+        "sol", "sols", "fertilite", "fertilisation", "amendement", "compost", "humus", "erosion",
+        "ph", "matiere", "microbiologie", "terre", "nutriment"
+    },
+    "farmlink_cultures": {
+        "culture", "cultures", "mais", "riz", "cacao", "coton", "sorgho", "arachide", "manioc",
+        "banane", "rendement", "semence", "production", "recolte"
+    },
+    "farmlink_eau": {
+        "irrigation", "irriguer", "goutte", "eau", "hydrique", "arrosage", "drainage", "barrage",
+        "forage", "pluvial", "pluie", "canal"
+    },
+    "farmlink_meca": {
+        "mecanisation", "mechanisation", "machinisme", "tracteur", "tractor", "moissonneuse",
+        "equipement", "equipements", "motorisation", "semis", "batteuse", "outil", "machine"
+    },
+    "farmlink_marche": {
+        "marche", "marches", "prix", "politique", "politiques", "subvention", "subventions",
+        "commerce", "commercialisation", "chaine", "valeur", "credit", "financement",
+        "investissement", "market"
+    },
+}
+
 _COLLECTION_SUFFIXES = {
     "farmlink_sols": "SOL",
     "farmlink_marche": "MARCHE",
@@ -94,6 +118,20 @@ def _missing_keywords(question: str, contexts: List[Dict], cutoff: float = 0.82)
             continue
         missing.append(token)
     return missing
+
+def _infer_domain(question: str) -> Optional[str]:
+    """Heuristique simple pour deviner le domaine si l'utilisateur n'en choisit pas."""
+    tokens = set(_tokenize(question))
+    if not tokens:
+        return None
+    best_domain: Optional[str] = None
+    best_score = 0
+    for domain, keywords in _DOMAIN_KEYWORDS.items():
+        score = len(tokens & keywords)
+        if score > best_score:
+            best_domain = domain
+            best_score = score
+    return best_domain if best_score else None
 
 def _raw_endpoints() -> Dict[str, Dict[str, str]]:
     base_url = (os.getenv("QDRANT_URL") or "").strip()
@@ -233,7 +271,14 @@ def query(q: QueryIn):
         return {"answer": answer, "contexts": []}
 
     # 3) RAG normal
-    contexts = retriever.search(q.question, top_k=q.top_k, domain=q.domain)
+    search_domain = q.domain
+    inferred_domain = None
+    if q.domain == "all":
+        inferred_domain = _infer_domain(q.question)
+        if inferred_domain and inferred_domain in available:
+            search_domain = inferred_domain
+
+    contexts = retriever.search(q.question, top_k=q.top_k, domain=search_domain)
 
     # Heuristique: si aucun mot de la question ne se retrouve dans le contexte → vide
     missing_keywords = _missing_keywords(q.question, contexts)
@@ -243,7 +288,8 @@ def query(q: QueryIn):
         contexts_for_prompt = []
         contexts = []
 
-    domain_label = DOMAIN_LABELS.get(q.domain) if q.domain != "all" else None
+    effective_domain = search_domain if search_domain != "all" else (inferred_domain or q.domain)
+    domain_label = DOMAIN_LABELS.get(effective_domain) if effective_domain and effective_domain != "all" else None
     prompt = build_prompt(
         q.question,
         contexts_for_prompt,
@@ -251,6 +297,11 @@ def query(q: QueryIn):
         domain_label=domain_label,
     )
     answer = generate_answer(prompt, temperature=q.temperature)
+
+    if q.domain == "all" and inferred_domain and search_domain == inferred_domain:
+        label = DOMAIN_LABELS.get(inferred_domain)
+        if label:
+            answer = f"**Domaine ciblé : {label}.**\n\n" + answer
 
     # 4) Si le modèle “oublie” la section sources, on ajoute (max 3 titres)
     import re as _re
