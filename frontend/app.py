@@ -10,7 +10,7 @@ import streamlit as st
 st.set_page_config(page_title="FarmLink Copilot", page_icon="🌾", layout="wide")
 
 # ⚠️ Utilise les variables d’environnement sur Render
-API_URL = os.getenv("API_URL", "http://localhost:8000")
+API_URL = os.getenv("API_URL", "http://localhost:8000").rstrip("/")
 
 # === ton CSS (inchangé) ===
 CUSTOM_CSS = """
@@ -40,7 +40,8 @@ st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 def fetch_domains(url: str) -> List[str]:
     try:
         resp = requests.get(f"{url}/domains", timeout=10)
-        return resp.json().get("domains", [])
+        resp.raise_for_status()
+        return resp.json().get("domains", []) or ["all"]
     except Exception:
         return ["all"]
 
@@ -48,6 +49,7 @@ def fetch_domains(url: str) -> List[str]:
 def check_health(url: str) -> bool:
     try:
         r = requests.get(f"{url}/health", timeout=5)
+        r.raise_for_status()
         return r.json().get("ok", False)
     except Exception:
         return False
@@ -78,12 +80,15 @@ if st.button("Envoyer"):
         with st.spinner("Réflexion..."):
             try:
                 resp = requests.post(f"{API_URL}/query", json=payload, timeout=60)
+                resp.raise_for_status()
                 data = resp.json()
                 st.session_state.messages.append({"role": "user", "content": user_input})
                 st.session_state.messages.append({"role": "assistant", "content": data.get("answer", "Pas de réponse.")})
                 st.session_state.contexts = data.get("contexts", [])
-            except Exception as e:
-                st.error(f"Erreur : {e}")
+            except requests.RequestException as e:
+                st.error(f"Erreur API : {e}")
+            except ValueError:
+                st.error("Réponse API non valide (JSON attendu).")
 
 for m in st.session_state.messages:
     st.markdown(f"**{m['role'].capitalize()} :** {m['content']}")
