@@ -480,7 +480,6 @@ def main() -> None:
         st.markdown("<div class='sidebar-section'></div>", unsafe_allow_html=True)
         if st.button("🧹 Nouvelle conversation", use_container_width=True, key="reset_chat"):
             reset_conversation()
-            st.experimental_rerun()
 
     st.markdown(
         """
