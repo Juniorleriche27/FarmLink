@@ -1,5 +1,8 @@
 import os
-from typing import Dict, List, Any
+import re
+from difflib import get_close_matches
+from unicodedata import normalize
+from typing import Any, Dict, List, Set
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -37,6 +40,49 @@ _COLLECTION_SUFFIXES = {
     "farmlink_eau": "EAU",
     "farmlink_meca": "MECA",
 }
+
+_WORD_RE = re.compile(r"[a-z0-9]{3,}")
+
+
+
+def _normalize_text(value: str) -> str:
+    """Return a lowercase ASCII-only version of the input."""
+    normalized = normalize("NFKD", (value or ""))
+    return normalized.encode("ascii", "ignore").decode("ascii").lower()
+
+
+
+def _tokenize(value: str) -> List[str]:
+    """Tokenize text for simple keyword coverage checks."""
+    return _WORD_RE.findall(_normalize_text(value))
+
+
+
+def _missing_keywords(question: str, contexts: List[Dict], cutoff: float = 0.82) -> List[str]:
+    """Identify question keywords that are absent from retrieved contexts."""
+    query_tokens = _tokenize(question)
+    if not query_tokens or not contexts:
+        return query_tokens if query_tokens and not contexts else []
+
+    context_tokens: Set[str] = set()
+    for ctx in contexts:
+        context_tokens.update(_tokenize(ctx.get("text", "")))
+        context_tokens.update(_tokenize(ctx.get("title", "")))
+
+    if not context_tokens:
+        return query_tokens
+
+    vocab = list(context_tokens)
+    missing: List[str] = []
+    for token in query_tokens:
+        if token in context_tokens:
+            continue
+        if get_close_matches(token, vocab, n=1, cutoff=cutoff):
+            continue
+        missing.append(token)
+    return missing
+
+
 
 def _raw_endpoints() -> Dict[str, Dict[str, str]]:
     base_url = (os.getenv("QDRANT_URL") or "").strip()
@@ -148,21 +194,43 @@ def query(q: QueryIn):
         }
 
     contexts = retriever.search(q.question, top_k=q.top_k, domain=q.domain)
-    prompt = build_prompt(q.question, contexts)
+    missing_keywords = _missing_keywords(q.question, contexts)
+    question_tokens = _tokenize(q.question)
+    contexts_for_prompt = contexts
+    if contexts and question_tokens and len(missing_keywords) == len(question_tokens):
+        contexts_for_prompt = []
+        contexts = []
+    prompt = build_prompt(q.question, contexts_for_prompt, missing_keywords)
     answer = generate_answer(prompt, temperature=q.temperature)
     return {"answer": answer, "contexts": contexts}
 
-def build_prompt(question: str, contexts: List[Dict]) -> str:
+def build_prompt(question: str, contexts: List[Dict], missing_keywords: List[str] | None = None) -> str:
+    """Build the final prompt for the LLM, optionally flagging missing keywords."""
+    missing = sorted(set(missing_keywords or []))
+    if missing:
+        keywords = ", ".join(missing)
+        guidance = (
+            "IMPORTANT : le CONTEXTE fourni ne couvre pas les mots clés suivants issus de la question : "
+            f"{keywords}. Si tu n'as pas assez d'informations provenant du corpus, "
+            "dis-le explicitement, invite à reformuler ou suggère de cibler un autre domaine.\n\n"
+        )
+    else:
+        guidance = ""
+
     if not contexts:
         return (
             "Tu es FarmLink, assistant RAG specialise en agriculture.\n"
+            f"{guidance}"
             "Aucune information n'est disponible. Invite l'utilisateur à reformuler."
         )
+
     ctx_block = "\n\n".join(
         f"- {c['text']}\n(source: {c['title']} | {c['source']})" for c in contexts
     )
+
     return (
         "Tu es FarmLink, assistant RAG specialise en agriculture.\n"
+        f"{guidance}"
         "Réponds uniquement avec les informations du CONTEXTE. "
         "Si ce n'est pas couvert, dis-le clairement.\n"
         f"Question: {question}\n\n"
@@ -170,3 +238,4 @@ def build_prompt(question: str, contexts: List[Dict]) -> str:
         f"{ctx_block}\n\n"
         "Réponse détaillée, claire et structurée avec une courte synthèse finale et les sources citées en fin de message."
     )
+
