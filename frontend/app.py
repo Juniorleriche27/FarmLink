@@ -493,15 +493,8 @@ def main() -> None:
         unsafe_allow_html=True,
     )
 
-    for message in st.session_state.messages:
-        avatar = "🌿" if message["role"] == "assistant" else "👤"
-        with st.chat_message(message["role"], avatar=avatar):
-            st.markdown(message["content"])
-
-    if st.session_state.contexts:
-        st.markdown("<div class='section-title'>Sources mobilisées</div>", unsafe_allow_html=True)
-        for idx, ctx in enumerate(st.session_state.contexts, start=1):
-            st.markdown(render_source_card(ctx, idx), unsafe_allow_html=True)
+    chat_placeholder = st.container()
+    sources_placeholder = st.container()
 
     with st.form("question_form", clear_on_submit=True):
         prompt = st.text_area(
@@ -539,6 +532,7 @@ def main() -> None:
                         "content": "La requête a expiré. Merci de réessayer dans quelques instants.",
                     }
                 )
+                st.session_state.contexts = []
             except requests.RequestException as exc:
                 st.session_state.messages.append(
                     {
@@ -546,6 +540,7 @@ def main() -> None:
                         "content": f"Impossible d'interroger l'API FarmLink : {exc}.",
                     }
                 )
+                st.session_state.contexts = []
             except ValueError:
                 st.session_state.messages.append(
                     {
@@ -553,14 +548,28 @@ def main() -> None:
                         "content": "La réponse du serveur n'est pas au format JSON attendu.",
                     }
                 )
+                st.session_state.contexts = []
             else:
                 answer = data.get("answer") or "Pas de réponse disponible pour le moment."
                 st.session_state.messages.append({"role": "assistant", "content": answer})
                 contexts = data.get("contexts")
                 st.session_state.contexts = contexts if isinstance(contexts, list) else []
-            st.experimental_rerun()
+
+    with chat_placeholder:
+        for message in st.session_state.messages:
+            avatar = "🌿" if message["role"] == "assistant" else "👤"
+            with st.chat_message(message["role"], avatar=avatar):
+                st.markdown(message["content"])
+
+    with sources_placeholder:
+        if st.session_state.contexts:
+            st.markdown("<div class='section-title'>Sources mobilisées</div>", unsafe_allow_html=True)
+            for idx, ctx in enumerate(st.session_state.contexts, start=1):
+                st.markdown(render_source_card(ctx, idx), unsafe_allow_html=True)
+
 
 
 if __name__ == "__main__":
     main()
+
 
