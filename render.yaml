@@ -1,4 +1,5 @@
 services:
+  # BACKEND FastAPI
   - type: web
     name: farmlink-backend
     env: python
@@ -8,6 +9,8 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
       - key: QDRANT_URL
         sync: false
       - key: QDRANT_API_KEY
@@ -18,3 +21,21 @@ services:
         value: mistral-small
       - key: QDRANT_ACTIVE_COLLECTIONS
         value: farmlink_marche,farmlink_sols,farmlink_eau,farmlink_meca
+
+  # FRONTEND Streamlit
+  - type: web
+    name: farmlink-frontend
+    env: python
+    plan: free
+    region: frankfurt
+    rootDir: frontend
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: API_URL
+        fromService:
+          type: web
+          name: farmlink-backend
+          property: url
