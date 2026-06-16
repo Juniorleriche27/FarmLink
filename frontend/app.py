@@ -1,3 +1,4 @@
+# UI refined
 """Streamlit front-end for FarmLink Copilot."""
 import os
 from copy import deepcopy
