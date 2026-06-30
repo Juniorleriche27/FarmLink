@@ -3,8 +3,12 @@ import os
 
 from qdrant_client import QdrantClient
 
-from chunkers import load_docs_from_folder, build_chunks
-from ingest_qdrant_core import ingest_documents  # voir bloc suivant
+try:
+    from ingest.chunkers import build_chunks, load_docs_from_folder
+    from ingest.ingest_qdrant_core import ingest_documents
+except ImportError:  # pragma: no cover - direct script execution from backend/ingest
+    from chunkers import build_chunks, load_docs_from_folder
+    from ingest_qdrant_core import ingest_documents
 
 try:  # load .env for local runs
     from dotenv import load_dotenv
@@ -35,20 +39,20 @@ def _get_qdrant_env(collection: str):
     return url, key
 
 
-if __name__ == "__main__":
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--folder", required=True, help="Chemin des documents (raw)")
-    ap.add_argument(
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--folder", required=True, help="Chemin des documents (raw)")
+    parser.add_argument(
         "--collection",
         required=True,
         choices=list(_COLLECTION_SUFFIXES.keys()),
     )
-    ap.add_argument(
+    parser.add_argument(
         "--domain",
         required=True,
         help="Nom logique du domaine (sols|marche|cultures|eau|meca)",
     )
-    args = ap.parse_args()
+    args = parser.parse_args()
 
     url, key = _get_qdrant_env(args.collection)
     if not url or not key:
@@ -57,8 +61,11 @@ if __name__ == "__main__":
         )
 
     client = QdrantClient(url=url, api_key=key)
-
     docs = load_docs_from_folder(args.folder, domain=args.domain)
     chunks = build_chunks(docs, chunk_size=1200, overlap=200, domain=args.domain)
     inserted = ingest_documents(client, args.collection, chunks, domain=args.domain)
     print(f"Ingestion OK: {inserted} chunks -> {args.collection}")
+
+
+if __name__ == "__main__":
+    main()

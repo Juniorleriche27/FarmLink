@@ -43,7 +43,7 @@ READERS = {
 }
 
 
-def load_docs_from_folder(folder: str) -> Iterator[Dict[str, str]]:
+def load_docs_from_folder(folder: str, domain: str = "unknown") -> Iterator[Dict[str, str]]:
     folder_p = Path(folder)
     for path in folder_p.rglob("*"):
         reader = READERS.get(path.suffix.lower())
@@ -52,7 +52,12 @@ def load_docs_from_folder(folder: str) -> Iterator[Dict[str, str]]:
         text = reader(path)
         if not text:
             continue
-        yield {"title": path.stem, "source": str(path), "text": clean_text(text)}
+        yield {
+            "title": path.stem,
+            "source": str(path),
+            "domain": domain,
+            "text": clean_text(text),
+        }
 
 
 def clean_text(text: str) -> str:

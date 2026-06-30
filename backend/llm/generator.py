@@ -6,8 +6,6 @@ import os
 import textwrap
 from typing import Optional
 
-import requests
-
 LOGGER = logging.getLogger(__name__)
 DEFAULT_MODEL = os.getenv("LLM_MODEL", "mistral-small")
 DEFAULT_PROVIDER = "mistral"
@@ -87,6 +85,8 @@ def generate_answer(prompt: str, temperature: float = 0.2, provider: Optional[st
 
 
 def _call_mistral(prompt: str, temperature: float, api_key: str) -> str:
+    import requests
+
     url = "https://api.mistral.ai/v1/chat/completions"
     headers = {
         "Authorization": f"Bearer {api_key}",
